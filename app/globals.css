@@ -30,13 +30,29 @@ body {
 .language-picker select { appearance: none; border: 0; outline: 0; background: transparent; font: inherit; cursor: pointer; }
 .language-picker svg:last-child { pointer-events: none; }
 .dark .site-shell, .dark main { background: #101422 !important; color: #f2f4ff !important; }
-.dark main .bg-white, .dark footer, .dark main .bg-\[\#f4f6ff\], .dark main .bg-\[\#f5f7ff\] { background-color: #191e30 !important; }
+.dark header.bg-white { background-color: #191e30 !important; border-color: #30384f !important; }
+.dark main .bg-white, .dark main [class*="bg-[#f3f5ff]"], .dark main [class*="bg-[#f5f6ff]"], .dark main [class*="bg-[#f1f2fc]"], .dark main [class*="bg-[#eef0ff]"], .dark main [class*="bg-[#edf0f7]"], .dark main [class*="bg-[#fffaf8]"], .dark main .bg-\[\#f4f6ff\], .dark main .bg-\[\#f5f7ff\] { background-color: #191e30 !important; }
+.dark main [class*="bg-[linear-gradient(120deg"] { background: linear-gradient(120deg, #181c30, #211d38) !important; }
+.dark main [class*="text-[#111426]"], .dark main [class*="text-[#090c20]"], .dark main [class*="text-[#15192b]"], .dark main [class*="text-[#171a2a]"], .dark main [class*="text-[#191d2d]"], .dark main [class*="text-[#1f2438]"], .dark main [class*="text-[#22283c]"], .dark main [class*="text-[#24283b]"] { color: #f4f6ff !important; }
+.dark main [class*="text-[#536087]"], .dark main [class*="text-[#56628a]"], .dark main [class*="text-[#5c678d]"], .dark main [class*="text-[#5d6683]"], .dark main [class*="text-[#5f6987]"], .dark main [class*="text-[#657196]"], .dark main [class*="text-[#7a84a4]"], .dark main [class*="text-[#8088a5]"] { color: #b8c1da !important; }
+.dark main [class*="border-[#c"], .dark main [class*="border-[#d"], .dark main [class*="border-slate"] { border-color: #30384f !important; }
 .dark main .text-slate-500, .dark main .text-slate-400, .dark footer .text-slate-500, .dark footer .text-slate-400 { color: #aeb6cf !important; }
 .dark main .text-slate-600, .dark .text-gray-700 { color: #e7eaff !important; }
 .dark main .border-slate-200, .dark main .border-\[\#e1e5f0\], .dark footer { border-color: #30384f !important; }
 .dark .language-picker, .dark .theme-toggle { border-color: #4b5572; color: #f2f4ff; background: #1c2336; }
 .dark .language-picker select { color: #f2f4ff; }
 .dark .bg-\[\#0d1022\] { background: #ff6948 !important; }
+.dark .metric-card { border-color: #3a4565; background: #1c2336; box-shadow: 0 20px 36px rgba(0, 0, 0, .24); }
+.dark .metric-copy, .dark .metric-number { color: #f2f4ff; }
+.dark footer { background: #161c2d !important; color: #f2f4ff; }
+.dark footer [class*="bg-[#eef0fb]"] { background-color: #161c2d !important; }
+.dark footer [class*="text-[#"] { color: #b8c1da !important; }
+.dark footer .footer-label, .dark footer [class*="text-[#111426]"] { color: #f4f6ff !important; }
+.dark footer [class*="text-[#ff6948]"] { color: #ff876d !important; }
+.dark footer input { border-color: #3b4564; background: #202940; color: #f2f4ff; }
+.dark footer input::placeholder { color: #93a0c2; }
+.dark footer [class*="border-[#"] { border-color: #3b4564; }
+.dark footer .bg-\[\#4057f4\] { background: #5268ff; }
 .footer-label { color: #111426; font-size: 1rem; font-weight: 650; letter-spacing: .18em; text-transform: uppercase; }
 .footer-link { transition: color .2s ease; }
 .footer-link:hover { color: #ff6948; }

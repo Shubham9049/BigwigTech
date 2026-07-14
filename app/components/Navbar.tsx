@@ -62,11 +62,11 @@ export default function Navbar() {
           : "top-5 bg-transparent"
       }`}
     >
-      <div className="h-20 flex items-center justify-between px-8">
+      <div className="flex h-20 items-center justify-between gap-5 px-6 xl:px-8">
 
         {/* Logo */}
 
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/" className="flex shrink-0 items-center gap-3">
   <Image
     src="/bigwig-logo.png"
     alt="Bigwig Logo"
@@ -79,7 +79,7 @@ export default function Navbar() {
 
         {/* Center */}
 
-        <nav className="hidden lg:flex gap-5 xl:gap-8">
+        <nav className="hidden min-[1280px]:flex shrink-0 items-center gap-4 xl:gap-6 2xl:gap-8">
 
           {[
             "Home",
@@ -93,7 +93,7 @@ export default function Navbar() {
             <Link
               key={i}
               href="/"
-              className="flex items-center gap-1 text-md text-gray-700 font-medium hover:text-[#ff6435] transition"
+              className="flex items-center gap-1 whitespace-nowrap text-sm font-medium text-gray-700 transition hover:text-[#ff6435] xl:text-base"
             >
               {item}
 
@@ -109,7 +109,7 @@ export default function Navbar() {
 
         {/* Right */}
 
-        <div className="hidden lg:flex items-center gap-3 text-gray-700">
+        <div className="hidden min-[1280px]:flex shrink-0 items-center gap-3 text-gray-700">
 
           <button onClick={toggleTheme} aria-label="Toggle dark mode" className="theme-toggle h-12 w-12 rounded-full border flex justify-center items-center">
             {dark ? <Sun size={20} /> : <Moon size={20} />}
@@ -123,7 +123,7 @@ export default function Navbar() {
             <ChevronDown size={16} />
           </label>
 
-          <button className="bg-[#0d1022] text-white rounded-full px-6 h-12 flex items-center gap-2 text-sm hover:bg-black transition"
+          <button className="flex h-12 items-center gap-2 whitespace-nowrap rounded-full bg-[#0d1022] px-6 text-sm text-white transition hover:bg-black"
           >
             Book a Call
             <ArrowRight size={18} />
@@ -131,7 +131,7 @@ export default function Navbar() {
 
         </div>
 
-        <button className="lg:hidden">
+        <button className="min-[1280px]:hidden" aria-label="Open navigation menu">
           <Menu />
         </button>
 

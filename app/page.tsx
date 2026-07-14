@@ -229,7 +229,7 @@ export default function Home() {
         </section>
         <section className="bg-[#f5f6ff] px-5 py-20 md:px-10 md:py-28 lg:py-32">
           <div className="mx-auto max-w-[1500px]">
-            <p className="eyebrow mb-10">Why CODT Technologies</p>
+            <p className="eyebrow mb-10">Why BigwigTechnologies</p>
             <h2 className="text-[clamp(3.5rem,5.45vw,6.5rem)] font-semibold leading-[.91] tracking-[-.07em] text-[#111426]">
               Not a vendor. An{" "}
               <em className="font-serif font-normal text-[#ff6948]">
@@ -245,7 +245,7 @@ export default function Home() {
                 {
                   title: "Lifetime support, never a sunset clause.",
                   description:
-                    "Every product CODT ships comes with lifetime support — no 30-day window, no expiring SLA, no surprise re-engagement fee. Bug fixes, OS-version compatibility, and security patches for the lifetime of the system, on the original team that built it.",
+                    "Every product Bigwigships comes with lifetime support — no 30-day window, no expiring SLA, no surprise re-engagement fee. Bug fixes, OS-version compatibility, and security patches for the lifetime of the system, on the original team that built it.",
                   icon: ShieldCheck,
                 },
                 {
@@ -330,7 +330,7 @@ export default function Home() {
             <div className="hidden">
               {[
                 "They&apos;re candid, technically excellent and always pushing our thinking forward.",
-                "CODT Technologies provided outstanding support from day one - focused, calm, and deeply invested.",
+                "BigwigTechnologies provided outstanding support from day one - focused, calm, and deeply invested.",
                 "Their team has the rare ability to turn complex ideas into a working product quickly.",
               ].map((quote) => (
                 <blockquote
