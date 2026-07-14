@@ -5,6 +5,12 @@
   --foreground: #24283b;
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 :root.dark { --background: #101422; --foreground: #f2f4ff; color-scheme: dark; }
 
 @theme inline {
@@ -70,7 +76,7 @@ body {
 .metric-stars { color: white; font-size: 1.25rem; letter-spacing: .18em; line-height: 1; }
 @keyframes metric-float { 0%, 100% { transform: translate3d(0, 0, 0); } 50% { transform: translate3d(0, -13px, 0); } }
 @media (max-width: 1023px) { .hero-metrics { max-width: 42rem; } .metric-card:nth-child(2) { margin-left: 2.5rem; } }
-@media (max-width: 640px) { .hero-metrics { gap: 1rem; } .metric-card { min-height: 96px; gap: 1rem; border-radius: 1.5rem; padding: 1.25rem; } .metric-card:nth-child(2) { margin-left: 1rem; } .metric-card:nth-child(3) { margin-left: 0; } .metric-copy { font-size: 1rem; } }
+@media (max-width: 640px) { .hero-metrics { gap: 1rem; } .metric-card { min-height: 96px; gap: 1rem; border-radius: 1.5rem; padding: 1.25rem; } .metric-card:nth-child(2) { margin-left: 0; } .metric-card:nth-child(3) { margin-left: 0; } .metric-copy { font-size: 1rem; } }
 
 .trusted-marquee { position: relative; z-index: 10; margin-top: 4.5rem; overflow: hidden; border-top: 1px solid #dfe4f4; border-bottom: 1px solid #dfe4f4; padding: 1.7rem 0 1.9rem; }
 .trusted-marquee > p { margin-bottom: 2rem; text-align: center; color: #657099; font-size: .85rem; font-weight: 700; letter-spacing: .34em; text-transform: uppercase; }

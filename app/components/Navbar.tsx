@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -11,10 +11,14 @@ import {
   Sun,
   ArrowRight,
   Menu,
+  X,
 } from "lucide-react";
+
+const navigationItems = ["Home", "Services", "Industries", "Portfolio", "Insights", "About Us", "Contact"];
 
 export default function Navbar() {
   const [sticky, setSticky] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [dark, setDark] = useState(() => typeof window !== "undefined" && (localStorage.getItem("theme") === "dark" || (!localStorage.getItem("theme") && window.matchMedia("(prefers-color-scheme: dark)").matches)));
   const [language, setLanguage] = useState(() => typeof window === "undefined" ? "EN" : localStorage.getItem("language") || "EN");
 
@@ -31,6 +35,15 @@ export default function Navbar() {
   useEffect(() => {
     document.documentElement.classList.toggle("dark", dark);
   }, [dark]);
+
+  useEffect(() => {
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    };
+
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, []);
 
   const toggleTheme = () => {
     const next = !dark;
@@ -81,15 +94,7 @@ export default function Navbar() {
 
         <nav className="hidden min-[1280px]:flex shrink-0 items-center gap-4 xl:gap-6 2xl:gap-8">
 
-          {[
-            "Home",
-            "Services",
-            "Industries",
-            "Portfolio",
-            "Insights",
-            "About Us",
-            "Contact",
-          ].map((item, i) => (
+          {navigationItems.map((item, i) => (
             <Link
               key={i}
               href="/"
@@ -131,11 +136,54 @@ export default function Navbar() {
 
         </div>
 
-        <button className="min-[1280px]:hidden" aria-label="Open navigation menu">
-          <Menu />
+        <button
+          type="button"
+          onClick={() => setMenuOpen((open) => !open)}
+          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-navigation"
+          className="grid h-11 w-11 place-items-center rounded-full border border-[#d8dce7] bg-white/90 text-[#0d1022] shadow-sm transition hover:border-[#ff6948] hover:text-[#ff6948] min-[1280px]:hidden"
+        >
+          {menuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
 
       </div>
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.nav
+            id="mobile-navigation"
+            initial={{ opacity: 0, y: -12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -12 }}
+            transition={{ duration: 0.2 }}
+            className="mx-3 mb-3 rounded-3xl border border-[#d8dce7] bg-white p-4 shadow-xl min-[1280px]:hidden"
+            aria-label="Mobile navigation"
+          >
+            <div className="grid gap-1">
+              {navigationItems.map((item) => (
+                <Link key={item} href="/" onClick={() => setMenuOpen(false)} className="rounded-2xl px-4 py-3 text-base font-medium text-gray-700 transition hover:bg-[#fff0eb] hover:text-[#ff6435]">
+                  {item}
+                </Link>
+              ))}
+            </div>
+            <div className="mt-3 flex flex-wrap items-center gap-3 border-t border-[#e5e7ef] pt-4">
+              <button type="button" onClick={toggleTheme} aria-label="Toggle dark mode" className="theme-toggle grid h-11 w-11 place-items-center rounded-full border">
+                {dark ? <Sun size={19} /> : <Moon size={19} />}
+              </button>
+              <label className="language-picker flex h-11 flex-1 items-center gap-2 rounded-full border px-4 text-sm">
+                <Globe size={18} />
+                <select value={language} onChange={(event) => changeLanguage(event.target.value)} aria-label="Select language" className="min-w-0 flex-1">
+                  <option value="EN">EN</option><option value="HI">HI</option><option value="DE">DE</option>
+                </select>
+                <ChevronDown size={16} />
+              </label>
+              <button type="button" className="flex h-11 w-full items-center justify-center gap-2 rounded-full bg-[#0d1022] px-4 text-sm text-white">
+                Book a Call <ArrowRight size={16} />
+              </button>
+            </div>
+          </motion.nav>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 }
