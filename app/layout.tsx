@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ThemeProvider from "./components/ThemeProvider";
+import BackToTop from "./components/BackToTop";
 
 export const metadata: Metadata = {
   title: "CODT — Your end-to-end AI Partner",
@@ -24,6 +25,7 @@ export default function RootLayout({
           <main className="flex-1 pt-24">{children}</main>
 
           <Footer />
+          <BackToTop />
         </ThemeProvider>
       </body>
     </html>
