@@ -105,7 +105,8 @@ export default function Navbar() {
     return () => window.removeEventListener("keydown", closeOnEscape);
   }, []);
 
-  const toggleTheme = () => setTheme(resolvedTheme === "dark" ? "light" : "dark");
+  const toggleTheme = () =>
+    setTheme(resolvedTheme === "dark" ? "light" : "dark");
 
   return (
     <motion.header
@@ -223,7 +224,13 @@ export default function Navbar() {
         </button>
       </div>
       <AnimatePresence>
-        {activeMenu === "services" && <ServicesMegaMenu />}
+        {activeMenu === "services" && (
+          <ServicesMegaMenu
+            onNavigate={function (): void {
+              throw new Error("Function not implemented.");
+            }}
+          />
+        )}
       </AnimatePresence>
       <AnimatePresence>
         {menuOpen && (

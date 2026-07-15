@@ -1,0 +1,46 @@
+:global(.dark) .page {
+  background: #101422 !important;
+  color: #f4f6ff !important;
+}
+
+:global(.dark) .page > [class~="sticky"],
+:global(.dark) .page > section:not(#book-a-call),
+:global(.dark) .page main {
+  background-color: #101422 !important;
+}
+
+:global(.dark) .page [class*="bg-[#eef0f7]"],
+:global(.dark) .page [class~="bg-white"],
+:global(.dark) .page [class*="bg-white/"] {
+  background-color: #1b2236 !important;
+}
+
+:global(.dark) .page [class*="text-[#0d0f21]"],
+:global(.dark) .page h1,
+:global(.dark) .page h2,
+:global(.dark) .page h3 {
+  color: #f7f8ff !important;
+}
+
+:global(.dark) .page [class*="text-slate-300"],
+:global(.dark) .page [class*="text-slate-400"],
+:global(.dark) .page [class*="text-slate-500"],
+:global(.dark) .page [class*="text-slate-600"] {
+  color: #b7c0d8 !important;
+}
+
+:global(.dark) .page [class*="border-slate"] {
+  border-color: #35415d !important;
+}
+
+:global(.dark) .page [class*="bg-indigo-50"] {
+  background-color: #2c3655 !important;
+}
+
+:global(.dark) .page [class*="text-[#ff5a34]"] {
+  color: #ff927d !important;
+}
+
+:global(.dark) .page [class*="bg-[#0b0e22]"] {
+  background-color: #090d19 !important;
+}
