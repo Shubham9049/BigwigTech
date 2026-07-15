@@ -3,6 +3,7 @@ import "./globals.css";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ThemeProvider from "./components/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "CODT — Your end-to-end AI Partner",
@@ -15,13 +16,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased">
+    <html lang="en" className="h-full antialiased" suppressHydrationWarning>
       <body className="min-h-full flex flex-col">
-        <Navbar />
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <Navbar />
 
-        <main className="flex-1 pt-24">{children}</main>
+          <main className="flex-1 pt-24">{children}</main>
 
-        <Footer />
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

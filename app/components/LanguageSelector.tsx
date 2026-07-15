@@ -1,7 +1,7 @@
 "use client";
 
 import { Check, ChevronDown, Globe2 } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 
 const languages = [
   { code: "en", label: "EN", title: "English" },
@@ -32,11 +32,23 @@ type LanguageSelectorProps = {
 };
 
 function getSavedLanguage() {
-  if (typeof window === "undefined") return "en";
   const savedLanguage = localStorage.getItem("language");
   return savedLanguage && languages.some((item) => item.code === savedLanguage)
     ? savedLanguage
     : "en";
+}
+
+function subscribeToLanguage(callback: () => void) {
+  window.addEventListener("storage", callback);
+  window.addEventListener("languagechange", callback);
+  return () => {
+    window.removeEventListener("storage", callback);
+    window.removeEventListener("languagechange", callback);
+  };
+}
+
+function getServerLanguage() {
+  return "en";
 }
 
 function writeGoogleTranslateCookie(language: string) {
@@ -50,19 +62,15 @@ export default function LanguageSelector({
   className = "",
   variant = "navbar",
 }: LanguageSelectorProps) {
-  const [language, setLanguage] = useState("en");
+  const language = useSyncExternalStore(
+    subscribeToLanguage,
+    getSavedLanguage,
+    getServerLanguage,
+  );
   const [open, setOpen] = useState(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const selectedLanguage =
     languages.find((item) => item.code === language) ?? languages[0];
-
-  useEffect(() => {
-    const saved = localStorage.getItem("language");
-
-    if (saved && languages.some((item) => item.code === saved)) {
-      setLanguage(saved);
-    }
-  }, []);
 
   useEffect(() => {
     const closeOnOutsideClick = (event: PointerEvent) => {
@@ -81,9 +89,9 @@ export default function LanguageSelector({
   }, []);
 
   const selectLanguage = (nextLanguage: string) => {
-    setLanguage(nextLanguage);
     setOpen(false);
     localStorage.setItem("language", nextLanguage);
+    window.dispatchEvent(new Event("languagechange"));
 
     // Matches the provided Google Translate integration when its script is present.
     writeGoogleTranslateCookie(nextLanguage);
@@ -111,7 +119,7 @@ export default function LanguageSelector({
 
       {open && (
         <div
-          className="absolute right-0 top-full z-[100] mt-3 w-72 overflow-hidden rounded-[22px] border border-[#d7dceb] bg-[#fbfcff] p-2 shadow-[0_24px_65px_rgba(34,45,82,.2)]"
+          className="language-selector-menu absolute right-0 top-full z-[100] mt-3 w-72 overflow-hidden rounded-[22px] border border-[#d7dceb] bg-[#fbfcff] p-2 shadow-[0_24px_65px_rgba(34,45,82,.2)]"
           role="listbox"
           aria-label="Select language"
         >

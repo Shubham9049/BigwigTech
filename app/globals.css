@@ -156,6 +156,16 @@ body {
 .dark .language-picker select {
   color: #f2f4ff;
 }
+.dark .language-selector {
+  border-color: #4b5572;
+  background: #1c2336;
+  color: #f2f4ff;
+}
+.dark .language-selector-menu {
+  border-color: #3b4564;
+  background: #1c2336;
+  color: #f2f4ff;
+}
 .dark .bg-\[\#0d1022\] {
   background: #ff6948 !important;
 }

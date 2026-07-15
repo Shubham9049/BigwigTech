@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { useTheme } from "next-themes";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronDown, Moon, Sun, ArrowRight, Menu, X } from "lucide-react";
@@ -39,13 +40,7 @@ export default function Navbar() {
   const [sticky, setSticky] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
-  const [dark, setDark] = useState(
-    () =>
-      typeof window !== "undefined" &&
-      (localStorage.getItem("theme") === "dark" ||
-        (!localStorage.getItem("theme") &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches)),
-  );
+  const { resolvedTheme, setTheme } = useTheme();
 
   useEffect(() => {
     const googleTranslateElementInit = () => {
@@ -99,10 +94,6 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    document.documentElement.classList.toggle("dark", dark);
-  }, [dark]);
-
-  useEffect(() => {
     const closeOnEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setMenuOpen(false);
@@ -114,12 +105,7 @@ export default function Navbar() {
     return () => window.removeEventListener("keydown", closeOnEscape);
   }, []);
 
-  const toggleTheme = () => {
-    const next = !dark;
-    setDark(next);
-    document.documentElement.classList.toggle("dark", next);
-    localStorage.setItem("theme", next ? "dark" : "light");
-  };
+  const toggleTheme = () => setTheme(resolvedTheme === "dark" ? "light" : "dark");
 
   return (
     <motion.header
@@ -211,7 +197,8 @@ export default function Navbar() {
             aria-label="Toggle dark mode"
             className="theme-toggle h-12 w-12 rounded-full border flex justify-center items-center"
           >
-            {dark ? <Sun size={20} /> : <Moon size={20} />}
+            <Sun size={20} className="hidden dark:block" />
+            <Moon size={20} className="block dark:hidden" />
           </button>
 
           <LanguageSelector />
@@ -268,7 +255,8 @@ export default function Navbar() {
                 aria-label="Toggle dark mode"
                 className="theme-toggle grid h-11 w-11 place-items-center rounded-full border"
               >
-                {dark ? <Sun size={19} /> : <Moon size={19} />}
+                <Sun size={19} className="hidden dark:block" />
+                <Moon size={19} className="block dark:hidden" />
               </button>
               <div className="notranslate">
                 <LanguageSelector />
