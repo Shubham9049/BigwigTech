@@ -89,13 +89,13 @@ export default function LanguageSelector({
   }, []);
 
   const selectLanguage = (nextLanguage: string) => {
-    setOpen(false);
     localStorage.setItem("language", nextLanguage);
-    window.dispatchEvent(new Event("languagechange"));
-
-    // Matches the provided Google Translate integration when its script is present.
     writeGoogleTranslateCookie(nextLanguage);
-    window.location.reload();
+
+    // Google Translate rewrites text nodes outside React's control. Navigating
+    // immediately prevents React from trying to update the open selector while
+    // those nodes are being replaced.
+    window.location.replace(window.location.href);
   };
 
   const buttonSize = variant === "footer" ? "h-[60px] px-5" : "h-12 px-4";

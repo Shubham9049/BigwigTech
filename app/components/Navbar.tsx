@@ -114,19 +114,18 @@ export default function Navbar() {
       initial={false}
       animate={{
         y: sticky ? 15 : 0,
-        width: sticky ? "92%" : "100%",
       }}
       transition={{
         duration: 0.35,
       }}
-      className={`fixed left-1/2 -translate-x-1/2 z-50
+      className={`fixed left-1/2 z-50 w-[calc(100%-1.5rem)] -translate-x-1/2 min-[1280px]:w-[92%]
       ${
         sticky
-          ? "top-0 bg-white shadow-xl rounded-full border border-neutral-200 backdrop-blur-md"
-          : "top-5 bg-transparent"
+          ? "top-0 rounded-[2rem] border border-neutral-200 bg-white shadow-xl backdrop-blur-md min-[1280px]:w-[92%] min-[1280px]:rounded-full"
+          : "top-5 bg-transparent min-[1280px]:w-[92%]"
       }`}
     >
-      <div className="flex h-20 items-center justify-between gap-5 px-6 xl:px-8">
+      <div className="flex h-20 items-center justify-between gap-5 px-4 sm:px-6 xl:px-8">
         {/* Logo */}
 
         <Link href="/" className="flex shrink-0 items-center gap-3">

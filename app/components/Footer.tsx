@@ -19,9 +19,9 @@ const explore = ["Services", "Industries", "Portfolio", "Insights"];
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[#cfd4e3] bg-[#eef0fb] px-5 pt-12 text-[#111426] md:px-10 lg:pt-12">
+    <footer className="border-t border-[#cfd4e3] bg-[#eef0fb] px-5 pt-10 text-[#111426] sm:px-6 md:px-10 lg:pt-12">
       <div className="mx-auto max-w-[1725px]">
-        <div className="grid gap-12 pb-12 lg:grid-cols-[1.35fr_.86fr_.95fr_1fr] lg:gap-x-16">
+        <div className="grid gap-9 pb-9 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:grid-cols-[1.35fr_.86fr_.95fr_1fr] lg:gap-x-16 lg:pb-12">
           <div>
             <Image
               src="/bigwig-logo.png"
@@ -31,19 +31,19 @@ export default function Footer() {
               priority
               className="h-10 w-auto"
             />
-            <p className="mt-8 max-w-[29rem] text-xl leading-[1.45] tracking-[-.02em] text-[#51608c]">
+            <p className="mt-6 max-w-[29rem] text-lg leading-[1.45] tracking-[-.02em] text-[#51608c] sm:mt-8 sm:text-xl">
               Building digital products that compound in value.
             </p>
 
-            <div className="mt-8 max-w-[31rem]">
-              <h2 className="text-xl font-medium tracking-[-.025em]">
+            <div className="mt-7 max-w-[31rem] sm:mt-8">
+              <h2 className="text-lg font-medium tracking-[-.025em] sm:text-xl">
                 Quarterly engineering notes
               </h2>
               <p className="mt-3 text-base leading-[1.55] text-[#95a1c1]">
                 One concise email every quarter. No funnel, no spam — only the
                 technical lessons our team thinks are worth your time.
               </p>
-              <form className="mt-6 flex items-center gap-3">
+              <form className="mt-5 flex items-center gap-2 sm:mt-6 sm:gap-3">
                 <label className="sr-only" htmlFor="footer-email">
                   Your email address
                 </label>
@@ -51,12 +51,12 @@ export default function Footer() {
                   id="footer-email"
                   type="email"
                   placeholder="Your email address"
-                  className="h-[62px] min-w-0 flex-1 rounded-full border border-[#d3d8e6] bg-transparent px-6 text-lg text-[#52618e] outline-none placeholder:text-[#68779e] focus:border-[#465cff]"
+                  className="h-14 min-w-0 flex-1 rounded-full border border-[#d3d8e6] bg-transparent px-5 text-base text-[#52618e] outline-none placeholder:text-[#68779e] focus:border-[#465cff] sm:h-[62px] sm:px-6 sm:text-lg"
                 />
                 <button
                   type="submit"
                   aria-label="Subscribe"
-                  className="grid h-[62px] w-[62px] shrink-0 place-items-center rounded-full bg-[#4057f4] text-[#111426] transition hover:bg-[#ff6948] hover:text-white"
+                  className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-[#4057f4] text-[#111426] transition hover:bg-[#ff6948] hover:text-white sm:h-[62px] sm:w-[62px]"
                 >
                   <ArrowRight size={24} strokeWidth={1.7} />
                 </button>
@@ -116,7 +116,7 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          <div className="space-y-14">
+          <div className="space-y-9 sm:space-y-14">
             <Office title="Milpitas, California">
               PO Box 1090, S Milpitas Blvd, PMB 2006
               <br />
@@ -130,11 +130,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-6 border-t border-[#cfd4e3] py-6 text-base text-[#58678f] lg:flex-row lg:items-center lg:justify-between">
-          <p className="text-xl tracking-[-.025em]">
+        <div className="flex flex-col gap-5 border-t border-[#cfd4e3] py-6 text-base text-[#58678f] lg:flex-row lg:items-center lg:justify-between">
+          <p className="text-base leading-6 tracking-[-.025em] sm:text-xl">
             © 2026 CODT Technologies Pvt. Ltd. All rights reserved.
           </p>
-          <div className="flex flex-wrap items-center gap-x-8 gap-y-3 font-medium">
+          <div className="grid grid-cols-2 items-center gap-x-5 gap-y-3 font-medium sm:flex sm:flex-wrap sm:gap-x-8">
             <a className="footer-link" href="#">
               Privacy Policy
             </a>
@@ -147,7 +147,7 @@ export default function Footer() {
             <a className="footer-link" href="#">
               Cookie preferences
             </a>
-            <LanguageSelector className="ml-1 min-w-[118px]" variant="footer" />
+            <LanguageSelector className="col-span-2 w-full sm:ml-1 sm:w-auto sm:min-w-[118px]" variant="footer" />
           </div>
         </div>
       </div>
