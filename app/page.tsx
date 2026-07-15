@@ -1,5 +1,5 @@
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+// import Navbar from "./components/Navbar";
+// import Footer from "./components/Footer";
 import InteractiveBackground from "./components/InteractiveBackground";
 import TypewriterHero from "./components/TypewriterHero";
 import TrustedMarquee from "./components/TrustedMarquee";
@@ -122,9 +122,9 @@ const approach = [
 export default function Home() {
   return (
     <div className="site-shell">
-      <Navbar />
+      {/* <Navbar /> */}
 
-      <main className="relative z-10 overflow-hidden bg-[#f3f5ff]/90 pt-24 text-[#24283b]">
+      <div className="relative z-10 overflow-hidden bg-[#f3f5ff]/90 text-[#24283b]">
         <section className="relative px-5 pb-14 pt-12 md:px-10 lg:pb-20 lg:pt-20">
           <InteractiveBackground />
           <div className="hero-orb absolute -right-32 top-0 h-96 w-96 rounded-full" />
@@ -500,8 +500,8 @@ export default function Home() {
             </button>
           </div>
         </section>
-      </main>
-      <Footer />
+      </div>
+      {/* <Footer /> */}
     </div>
   );
 }

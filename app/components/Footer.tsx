@@ -1,7 +1,5 @@
 import {
   ArrowRight,
-  ChevronDown,
-  Globe2,
   Mail,
   MapPin,
   Phone,
@@ -15,6 +13,7 @@ import {
   FaXTwitter,
 } from "react-icons/fa6";
 import Image from "next/image";
+import LanguageSelector from "./LanguageSelector";
 
 const explore = ["Services", "Industries", "Portfolio", "Insights"];
 
@@ -148,14 +147,7 @@ export default function Footer() {
             <a className="footer-link" href="#">
               Cookie preferences
             </a>
-            <button
-              className="ml-1 inline-flex h-[60px] items-center gap-3 rounded-full border border-[#bfc5d5] px-4 text-[#111426]"
-              type="button"
-            >
-              <Globe2 size={21} />
-              <span>EN</span>
-              <ChevronDown size={17} />
-            </button>
+            <LanguageSelector className="ml-1 min-w-[118px]" variant="footer" />
           </div>
         </div>
       </div>
