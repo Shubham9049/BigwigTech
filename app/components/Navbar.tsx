@@ -8,6 +8,7 @@ import Image from "next/image";
 import { ChevronDown, Moon, Sun, ArrowRight, Menu, X } from "lucide-react";
 import ServicesMegaMenu from "./ServicesMegaMenu";
 import LanguageSelector from "./LanguageSelector";
+import IndustriesMegaMenu from "./IndustriesMegaMenu";
 
 const navigationItems = [
   { name: "Home", href: "/" },
@@ -158,7 +159,6 @@ export default function Navbar() {
                       )
                     }
                     aria-expanded={activeMenu === "services"}
-                    aria-controls="services-mega-menu"
                     className="flex items-center gap-1 whitespace-nowrap text-sm font-medium text-gray-700 transition hover:text-[#ff6435] xl:text-base"
                   >
                     Services
@@ -166,6 +166,35 @@ export default function Navbar() {
                       size={17}
                       className={`transition-transform duration-300 ${
                         activeMenu === "services" ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                </div>
+              );
+            }
+
+            if (item.name === "Industries") {
+              return (
+                <div
+                  key={item.name}
+                  className="relative"
+                  onMouseEnter={() => setActiveMenu("industries")}
+                >
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setActiveMenu((menu) =>
+                        menu === "industries" ? null : "industries",
+                      )
+                    }
+                    aria-expanded={activeMenu === "industries"}
+                    className="flex items-center gap-1 whitespace-nowrap text-sm font-medium text-gray-700 transition hover:text-[#ff6435] xl:text-base"
+                  >
+                    Industries
+                    <ChevronDown
+                      size={17}
+                      className={`transition-transform duration-300 ${
+                        activeMenu === "industries" ? "rotate-180" : ""
                       }`}
                     />
                   </button>
@@ -181,9 +210,7 @@ export default function Navbar() {
               >
                 {item.name}
 
-                {(item.name === "Industries" || item.name === "Portfolio") && (
-                  <ChevronDown size={17} />
-                )}
+                {item.name === "Portfolio" && <ChevronDown size={17} />}
               </Link>
             );
           })}
@@ -224,11 +251,16 @@ export default function Navbar() {
       </div>
       <AnimatePresence>
         {activeMenu === "services" && (
-          <ServicesMegaMenu
-            onNavigate={() => setActiveMenu(null)}
-          />
+          <ServicesMegaMenu onNavigate={() => setActiveMenu(null)} />
         )}
       </AnimatePresence>
+
+      <AnimatePresence>
+        {activeMenu === "industries" && (
+          <IndustriesMegaMenu onNavigate={() => setActiveMenu(null)} />
+        )}
+      </AnimatePresence>
+
       <AnimatePresence>
         {menuOpen && (
           <motion.nav
