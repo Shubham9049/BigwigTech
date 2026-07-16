@@ -309,34 +309,189 @@ export default function IndustriesPage() {
   return (
     <div className="industries-page overflow-hidden bg-[#f6f7fd] text-[#20263a]">
       <style>{`
-        .industries-page p { font-size: 14px !important; line-height: 1.55 !important; }
-        .industries-page .industries-eyebrow { font-size: 11px !important; line-height: 1.2 !important; }
-        .industries-page h3 { font-size: 18px !important; }
-        .industries-page a { font-size: 14px; }
-        .industries-page table { font-size: 13px !important; }
-        .industries-page table th, .industries-page table td { padding: 1rem !important; }
-        .industries-hero { min-height: 733px; background: radial-gradient(circle at 22% 25%, rgba(255, 109, 80, .13), transparent 34%), radial-gradient(circle at 78% 12%, rgba(155, 166, 235, .23), transparent 40%), linear-gradient(180deg, #f7f8ff 0%, #f4f6fc 100%); }
-        .industries-hero-grid { background-image: linear-gradient(90deg, rgba(197, 203, 224, .34) 1px, transparent 1px), linear-gradient(0deg, rgba(197, 203, 224, .28) 1px, transparent 1px); background-size: 318px 100%, 100% 184px; }
-        .industries-icon-wall { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-        .industries-stat-strip { border-top: 1px solid rgba(190, 196, 215, .62); }
-        .dark .industries-page { background: #101422 !important; color: #f2f4ff !important; }
-        .dark .industries-hero { background: radial-gradient(circle at 22% 25%, rgba(255, 105, 72, .18), transparent 34%), radial-gradient(circle at 78% 12%, rgba(82, 104, 255, .19), transparent 42%), linear-gradient(180deg, #111727 0%, #101422 100%) !important; border-color: #30384f !important; }
-        .dark .industries-hero-grid { background-image: linear-gradient(90deg, rgba(70, 80, 112, .34) 1px, transparent 1px), linear-gradient(0deg, rgba(70, 80, 112, .27) 1px, transparent 1px); }
-        .dark .industries-page section { border-color: #30384f !important; }
-        .dark .industries-page .industry-card, .dark .industries-page .industry-proof-card, .dark .industries-page .industry-faq-card, .dark .industries-page .industry-panel { background: #191e30 !important; border-color: #30384f !important; box-shadow: 0 18px 34px rgba(0,0,0,.22) !important; }
-        .dark .industries-page .industry-muted-panel, .dark .industries-page .industry-chip { background: #202940 !important; border-color: #35415d !important; }
-        .dark .industries-page .industry-band { background: #151a2b !important; }
-        .dark .industries-page .industries-icon-tile { background: rgba(27, 34, 54, .68) !important; border-color: rgba(63, 73, 107, .76) !important; color: #8f9ac1 !important; }
-        .dark .industries-page .industries-stat-strip { border-color: #30384f !important; }
-        .dark .industries-page .industry-divider { background: #30384f !important; }
-        .dark .industries-page .industry-soft-text { color: #b8c1da !important; }
-        .dark .industries-page .industry-strong-text { color: #f4f6ff !important; }
-        .dark .industries-page .industry-accent-panel { background: #3a2a35 !important; }
-        @media (max-width: 640px) {
-          .industries-page p { font-size: 14px !important; }
-          .industries-page h3 { font-size: 17px !important; }
-        }
-      `}</style>
+  .industries-page p {
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+  }
+
+  .industries-page .industries-eyebrow {
+    font-size: 11px !important;
+    line-height: 1.2 !important;
+  }
+
+  .industries-page h3 {
+    font-size: 18px !important;
+  }
+
+  .industries-page a {
+    font-size: 14px;
+  }
+
+  .industries-page table {
+    font-size: 13px !important;
+  }
+
+  .industries-page table th,
+  .industries-page table td {
+    padding: 1rem !important;
+  }
+
+  .industries-hero {
+    min-height: 733px;
+    background:
+      radial-gradient(circle at 22% 25%, rgba(255, 109, 80, .13), transparent 34%),
+      radial-gradient(circle at 78% 12%, rgba(155, 166, 235, .23), transparent 40%),
+      linear-gradient(180deg, #f7f8ff 0%, #f4f6fc 100%);
+  }
+
+  .industries-hero-grid {
+    background-image:
+      linear-gradient(90deg, rgba(197, 203, 224, .34) 1px, transparent 1px),
+      linear-gradient(0deg, rgba(197, 203, 224, .28) 1px, transparent 1px);
+    background-size: 318px 100%, 100% 184px;
+  }
+
+  .industries-icon-wall {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .industries-stat-strip {
+    border-top: 1px solid rgba(190, 196, 215, .62);
+  }
+
+  /* =========================
+      DARK MODE
+  ========================== */
+
+  .dark .industries-page {
+    background: #101422 !important;
+    color: #f4f6ff !important;
+  }
+
+  .dark .industries-page section {
+    border-color: #30384f !important;
+  }
+
+  .dark .industries-hero {
+    background:
+      radial-gradient(circle at 22% 25%, rgba(255, 105, 72, .18), transparent 34%),
+      radial-gradient(circle at 78% 12%, rgba(82, 104, 255, .19), transparent 42%),
+      linear-gradient(180deg, #111727 0%, #101422 100%) !important;
+    border-color: #30384f !important;
+  }
+
+  .dark .industries-hero-grid {
+    background-image:
+      linear-gradient(90deg, rgba(70, 80, 112, .34) 1px, transparent 1px),
+      linear-gradient(0deg, rgba(70, 80, 112, .27) 1px, transparent 1px);
+  }
+
+  /* Cards */
+
+  .dark .industries-page .industry-card,
+  .dark .industries-page .industry-proof-card,
+  .dark .industries-page .industry-faq-card,
+  .dark .industries-page .industry-panel {
+    background: #191e30 !important;
+    border-color: #30384f !important;
+    box-shadow: 0 18px 34px rgba(0, 0, 0, .22) !important;
+  }
+
+  .dark .industries-page .industry-muted-panel,
+  .dark .industries-page .industry-chip {
+    background: #202940 !important;
+    border-color: #35415d !important;
+  }
+
+  .dark .industries-page .industry-band {
+    background: #151a2b !important;
+  }
+
+  .dark .industries-page .industry-accent-panel {
+    background: #3a2a35 !important;
+  }
+
+  .dark .industries-page .industries-icon-tile {
+    background: rgba(27, 34, 54, .68) !important;
+    border-color: rgba(63, 73, 107, .76) !important;
+    color: #8f9ac1 !important;
+  }
+
+  .dark .industries-page .industries-stat-strip {
+    border-color: #30384f !important;
+  }
+
+  .dark .industries-page .industry-divider {
+    background: #30384f !important;
+  }
+
+  /* =========================
+      TEXT COLORS
+  ========================== */
+
+  .dark .industries-page h1,
+  .dark .industries-page h2,
+  .dark .industries-page h3,
+  .dark .industries-page h4,
+  .dark .industries-page h5,
+  .dark .industries-page h6 {
+    color: #f8f9ff !important;
+  }
+
+  .dark .industries-page p,
+  .dark .industries-page span,
+  .dark .industries-page li,
+  .dark .industries-page label,
+  .dark .industries-page small {
+    color: #b8c1da !important;
+  }
+
+  .dark .industries-page strong,
+  .dark .industries-page b {
+    color: #ffffff !important;
+  }
+
+  .dark .industries-page a {
+    color: #d9e1ff !important;
+  }
+
+  .dark .industries-page table,
+  .dark .industries-page table th,
+  .dark .industries-page table td {
+    color: #d7dff7 !important;
+    border-color: #30384f !important;
+  }
+
+  .dark .industries-page table th {
+    color: #ffffff !important;
+  }
+
+  .dark .industries-page .industry-soft-text {
+    color: #b8c1da !important;
+  }
+
+  .dark .industries-page .industry-strong-text {
+    color: #f4f6ff !important;
+  }
+
+  .dark .industries-page .industries-eyebrow {
+    color: #ff8b6e !important;
+  }
+
+  /* =========================
+      MOBILE
+  ========================== */
+
+  @media (max-width: 640px) {
+    .industries-page p {
+      font-size: 14px !important;
+    }
+
+    .industries-page h3 {
+      font-size: 17px !important;
+    }
+  }
+`}</style>
 
       <section className="industries-hero relative overflow-hidden border-b border-[#d8dce9] px-5 pb-16 pt-10 sm:px-8 lg:px-10 lg:pb-20">
         <div className="industries-hero-grid pointer-events-none absolute inset-0 opacity-70" />
