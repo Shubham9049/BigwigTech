@@ -216,7 +216,7 @@ export default function SaasAppDevelopmentPage() {
   return (
     <div
       id="top"
-      className={`${styles.page} min-h-screen bg-[#f4f4fa] text-[#0d0f21] dark:bg-[#0a0b18] dark:text-white`}
+      className={`${styles.page} -mt-24 min-h-screen pt-24 bg-[#f4f4fa] text-[#0d0f21] dark:bg-[#0a0b18] dark:text-white`}
     >
       <main className="relative overflow-hidden">
         <div
@@ -666,13 +666,6 @@ export default function SaasAppDevelopmentPage() {
           </div>
         </div>
       </section>
-      <a
-        href="#top"
-        aria-label="Back to top"
-        className="fixed bottom-6 left-6 grid h-11 w-11 place-items-center rounded-full border border-slate-200 bg-white text-lg shadow-lg dark:border-white/10 dark:bg-[#1b2236]"
-      >
-        ↑
-      </a>
     </div>
   );
 }

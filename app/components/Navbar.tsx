@@ -114,19 +114,19 @@ export default function Navbar() {
       ref={headerRef}
       initial={false}
       animate={{
-        y: sticky ? 15 : 0,
+        y: sticky ? 8 : 0,
       }}
       transition={{
         duration: 0.35,
       }}
-      className={`fixed left-1/2 z-50 w-[calc(100%-1.5rem)] -translate-x-1/2 min-[1280px]:w-[92%]
+      className={`fixed left-1/2 z-50 w-[calc(100%-2rem)] max-w-[1725px] -translate-x-1/2 min-[1280px]:w-[88%]
       ${
         sticky
-          ? "top-0 rounded-[2rem] border border-neutral-200 bg-white shadow-xl backdrop-blur-md min-[1280px]:w-[92%] min-[1280px]:rounded-full"
-          : "top-5 bg-transparent min-[1280px]:w-[92%]"
+          ? "top-2 rounded-[2rem] border border-neutral-200 bg-white shadow-xl backdrop-blur-md dark:border-white/10 dark:bg-[#171b2d] min-[1280px]:w-[88%] min-[1280px]:rounded-full"
+          : "top-2 bg-transparent min-[1280px]:w-[88%]"
       }`}
     >
-      <div className="flex h-20 items-center justify-between gap-5 px-4 sm:px-6 xl:px-8">
+      <div className="flex h-[72px] items-center justify-between gap-4 px-4 sm:px-6 xl:px-8">
         {/* Logo */}
 
         <Link href="/" className="flex shrink-0 items-center gap-3">
@@ -159,7 +159,8 @@ export default function Navbar() {
                       )
                     }
                     aria-expanded={activeMenu === "services"}
-                    className="flex items-center gap-1 whitespace-nowrap text-sm font-medium text-gray-700 transition hover:text-[#ff6435] xl:text-base"
+                    aria-controls="services-mega-menu"
+                    className="flex items-center gap-1 whitespace-nowrap text-sm font-medium text-gray-700 transition hover:text-[#ff6435] dark:text-slate-100 xl:text-base"
                   >
                     Services
                     <ChevronDown
@@ -206,7 +207,7 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="flex items-center gap-1 whitespace-nowrap text-sm font-medium text-gray-700 transition hover:text-[#ff6435] xl:text-base"
+                className="flex items-center gap-1 whitespace-nowrap text-sm font-medium text-gray-700 transition hover:text-[#ff6435] dark:text-slate-100 xl:text-base"
               >
                 {item.name}
 
@@ -218,11 +219,11 @@ export default function Navbar() {
 
         {/* Right */}
 
-        <div className="hidden min-[1280px]:flex shrink-0 items-center gap-3 text-gray-700">
+        <div className="hidden min-[1280px]:flex shrink-0 items-center gap-3 text-gray-700 dark:text-slate-100">
           <button
             onClick={toggleTheme}
             aria-label="Toggle dark mode"
-            className="theme-toggle h-12 w-12 rounded-full border flex justify-center items-center"
+            className="theme-toggle flex h-12 w-12 items-center justify-center rounded-full border dark:border-white/20 dark:bg-white/5"
           >
             <Sun size={20} className="hidden dark:block" />
             <Moon size={20} className="block dark:hidden" />
@@ -244,7 +245,7 @@ export default function Navbar() {
           }
           aria-expanded={menuOpen}
           aria-controls="mobile-navigation"
-          className="grid h-11 w-11 place-items-center rounded-full border border-[#d8dce7] bg-white/90 text-[#0d1022] shadow-sm transition hover:border-[#ff6948] hover:text-[#ff6948] min-[1280px]:hidden"
+          className="grid h-11 w-11 place-items-center rounded-full border border-[#d8dce7] bg-white/90 text-[#0d1022] shadow-sm transition hover:border-[#ff6948] hover:text-[#ff6948] dark:border-white/20 dark:bg-[#171b2d]/95 dark:text-white min-[1280px]:hidden"
         >
           {menuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
@@ -269,7 +270,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.2 }}
-            className="mx-3 mb-3 rounded-3xl border border-[#d8dce7] bg-white p-4 shadow-xl min-[1280px]:hidden"
+            className="mx-3 mb-3 rounded-3xl border border-[#d8dce7] bg-white p-4 shadow-xl dark:border-white/10 dark:bg-[#171b2d] min-[1280px]:hidden"
             aria-label="Mobile navigation"
           >
             <div className="grid gap-1">
@@ -278,18 +279,18 @@ export default function Navbar() {
                   key={item.name}
                   href={item.href}
                   onClick={() => setMenuOpen(false)}
-                  className="rounded-2xl px-4 py-3 text-base font-medium text-gray-700 transition hover:bg-[#fff0eb] hover:text-[#ff6435]"
+                  className="rounded-2xl px-4 py-3 text-base font-medium text-gray-700 transition hover:bg-[#fff0eb] hover:text-[#ff6435] dark:text-slate-100 dark:hover:bg-white/10"
                 >
                   {item.name}
                 </Link>
               ))}
             </div>
-            <div className="mt-3 flex flex-wrap items-center gap-3 border-t border-[#e5e7ef] pt-4">
+            <div className="mt-3 flex flex-wrap items-center gap-3 border-t border-[#e5e7ef] pt-4 dark:border-white/10">
               <button
                 type="button"
                 onClick={toggleTheme}
                 aria-label="Toggle dark mode"
-                className="theme-toggle grid h-11 w-11 place-items-center rounded-full border"
+                className="theme-toggle grid h-11 w-11 place-items-center rounded-full border dark:border-white/20 dark:bg-white/5"
               >
                 <Sun size={19} className="hidden dark:block" />
                 <Moon size={19} className="block dark:hidden" />

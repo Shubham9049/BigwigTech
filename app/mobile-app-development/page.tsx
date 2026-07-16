@@ -7,120 +7,115 @@ import { useTheme } from "next-themes";
 import styles from "../components/ServiceDarkMode.module.css";
 
 const nav = ["Overview", "Capabilities", "Method", "Proof", "Stack", "FAQ"];
-
 const capabilities = [
   [
     "01",
-    "Front-end engineering",
-    "React and Next.js interfaces that feel instant, look considered and are built to stay that way.",
+    "Native iOS",
+    "Swift apps that feel inevitable on the platform — widgets, App Clips and the polish Apple users notice.",
   ],
   [
     "02",
-    "Back-end & APIs",
-    "Fast, documented APIs over Postgres — the contract your web, mobile and partner integrations all share.",
+    "Native Android",
+    "Kotlin apps tuned for real devices and the long tail of Android hardware, not only the newest camera.",
   ],
   [
     "03",
-    "E-commerce",
-    "Storefronts, checkout and subscriptions engineered for conversion, payments, tax and fulfilment.",
+    "Cross-platform",
+    "Flutter and React Native when one codebase serves the business better — chosen on engineering merit, not fashion.",
   ],
   [
     "04",
-    "Performance & SEO",
-    "Core Web Vitals in the green, structured data and rendering strategy that compounds organic traffic.",
+    "Offline-first sync",
+    "Local-first data with conflict-free sync, so the app works in basements, planes and dead zones.",
   ],
   [
     "05",
-    "Accessibility",
-    "WCAG-conscious components and testing, because excluding users is also bad business.",
+    "Payments, NFC & push",
+    "In-app purchases, wallets, tap-to-pay and NFC paired with notifications that respect the user enough to be kept on.",
   ],
   [
     "06",
-    "CMS & content ops",
-    "Headless content workflows your marketing team can run without engineering tickets.",
+    "Store launch & beyond",
+    "Review-proof submissions, staged rollouts, crash monitoring and OS-version compatibility for life.",
   ],
 ];
-
 const steps = [
   [
     "01",
-    "SCOPE",
-    "Set the budgets",
-    "Performance, SEO and conversion are decided early — not discovered after launch.",
+    "PROTOTYPE",
+    "Prototype on-device",
+    "Clickable flows on real hardware in week two — because an app is judged in the hand, not on a presentation.",
   ],
   [
     "02",
-    "SYSTEM",
-    "Design the system",
-    "Information architecture, reusable components and content patterns make each new page easier.",
+    "BUILD",
+    "Build offline-first",
+    "Sync, caching and failure states are engineered from the start. Connectivity is treated as a bonus, not an assumption.",
   ],
   [
     "03",
-    "BUILD",
-    "Build & verify",
-    "Lighthouse, accessibility and visual regression checks run on every meaningful release.",
+    "TEST",
+    "Test on real devices",
+    "A device wall of cheap Androids and old iPhones — your users' phones, not your founder's.",
   ],
   [
     "04",
     "LAUNCH",
-    "Launch & compound",
-    "Analytics tell us what people do; iterations turn real behaviour into the next improvement.",
+    "Launch & iterate",
+    "Staged rollouts, crash-free-rate alerts and analytics-driven iteration. The app improves every release.",
   ],
 ];
-
 const stack: Array<[string, string[]]> = [
-  ["FOUNDATION", ["Next.js", "TypeScript", "React", "Node.js"]],
-  ["CONTENT", ["Sanity", "Contentful", "Strapi", "MDX"]],
-  ["COMMERCE", ["Stripe", "Shopify", "Medusa", "Postgres"]],
+  ["MOBILE", ["SwiftUI", "Kotlin", "Flutter", "React Native"]],
+  ["SERVICES", ["Firebase", "SQLite", "Supabase", "Postgres"]],
+  ["COMMERCE", ["Stripe", "In-App Purchase", "NFC", "Fastlane"]],
 ];
-
 const related = [
   [
-    "UX/UI Design",
+    "UI / UX Design",
     "Research-led product design that ships as clear, conversion-aware interfaces.",
   ],
   [
-    "SaaS App Development",
-    "Multi-tenant platforms with billing, RBAC and analytics — built to scale.",
+    "IoT Solutions",
+    "Connected hardware, edge software and cloud platforms designed together as one system.",
   ],
   [
-    "DevOps & Cloud (AWS)",
-    "Cloud foundations that scale without a 3 a.m. surprise — CI/CD, security and observability.",
+    "SaaS App Development",
+    "Multi-tenant platforms with billing, RBAC and analytics — built to scale from user one to millions.",
   ],
 ];
-
 const faqs = [
   [
-    "Why not WordPress or a site builder?",
-    "For a brochure site, honestly, use one and we will help you choose. When conversion, integrations, performance or future growth matter, a tailored website becomes a durable business asset rather than a theme to work around.",
+    "Native or cross-platform — which should we pick?",
+    "It depends on what the app does and how long it will evolve. Heavy platform integration, cameras or background work favour native; content-and-commerce apps usually ship faster and cheaper on Flutter or React Native with no user-visible compromise.",
   ],
   [
-    "How fast will the site actually be?",
-    "We set Core Web Vitals targets in discovery and measure them throughout the build. The result is a site that feels quick on ordinary devices and connections, not only a developer laptop.",
+    "How long will we be in the App Store?",
+    "We plan for review from day one and use TestFlight and staged rollout processes. Most launches clear review in days, not weeks.",
   ],
   [
-    "Can you migrate us without losing our rankings?",
-    "Yes. We plan URL redirects, metadata, structured data and crawl checks before launch, then monitor the transition closely.",
+    "Do you handle App Store and Play Store approval?",
+    "Yes. We prepare the store listings, privacy disclosures, build signing and submission process, then remain available through review.",
   ],
   [
-    "Do you do design as well as build?",
-    "Yes. We can lead the full product and visual design process or collaborate with your in-house design team.",
+    "What happens after launch?",
+    "We monitor crashes, performance and real behaviour, then help prioritise the next releases. Mobile products are never finished at version one.",
   ],
   [
-    "Will the site be editable by my marketing team?",
-    "Yes. We build the content model around the changes your team actually needs to make, then hand it over with clear guidance.",
+    "Can you take over a mobile app another agency built?",
+    "Yes. We start with a code and release audit, stabilise the most important risks, then make a practical roadmap.",
   ],
   [
-    "Which headless CMS should we use?",
-    "The one that suits your team, governance and publishing needs. We recommend and configure the right fit rather than forcing a preferred tool.",
+    "React Native or Flutter, if we go cross-platform?",
+    "Both can deliver excellent apps. We choose based on your existing team, integrations, visual requirements and long-term product plan.",
   ],
   [
-    "Can you help us rank in AI answers and search, not just classic SEO?",
-    "We build clear information architecture, structured data and authoritative content foundations that support both traditional and emerging search experiences.",
+    "How do you handle in-app purchases and subscriptions?",
+    "We implement platform-compliant payment flows, receipt validation and the entitlement model behind them so access stays reliable.",
   ],
   [
-    "Do you handle multilingual sites?",
-    "Yes. Translation workflows, locale-aware content, routing and international SEO are designed into the platform from the start.",
+    "How do you push updates without forcing users through the app store every time?",
+    "Content and backend changes ship without a store release; app-binary updates use release channels and staged rollouts to minimise disruption.",
   ],
 ];
 
@@ -131,7 +126,6 @@ function Label({ children }: { children: React.ReactNode }) {
     </p>
   );
 }
-
 function Em({ children }: { children: React.ReactNode }) {
   return (
     <span className="font-serif font-normal italic text-[#ff5a34]">
@@ -139,7 +133,6 @@ function Em({ children }: { children: React.ReactNode }) {
     </span>
   );
 }
-
 function Heading({
   children,
   className = "",
@@ -156,23 +149,23 @@ function Heading({
   );
 }
 
-function MetricCard() {
+function Metrics() {
   return (
     <div className="rounded-3xl border border-slate-200/80 bg-white/90 p-5 shadow-[0_30px_60px_-25px_rgba(15,15,40,.25)] dark:border-white/10 dark:bg-white/[.04] sm:p-8">
       <div className="flex justify-between text-[10px] font-semibold tracking-[.14em] text-slate-500 dark:text-slate-400">
         <span>
           <i className="mr-2 inline-block h-2 w-2 rounded-full bg-emerald-500" />
-          WEB-OPS — LIVE
+          MOBILE-OPS — LIVE
         </span>
-        <span>DISCIPLINE 07 / 14</span>
+        <span>DISCIPLINE 08 / 14</span>
       </div>
       <p className="mt-8 text-[10px] font-semibold tracking-[.14em] text-slate-400">
-        PEAK CONCURRENT USERS SERVED
+        GLOBAL 90-DAY PRODUCTIVITY
       </p>
       <div className="mt-2 flex items-baseline gap-2">
-        <strong className="text-6xl tracking-tight sm:text-7xl">50K+</strong>
-        <span className="text-xs font-semibold text-emerald-600">
-          ▲ live traffic protected
+        <strong className="text-6xl tracking-tight sm:text-7xl">99.5</strong>
+        <span className="text-sm font-semibold text-emerald-600">
+          ▲ 4.8m sessions on the app
         </span>
       </div>
       <svg
@@ -182,12 +175,12 @@ function MetricCard() {
         aria-hidden="true"
       >
         <path
-          d="M0 95 C105 93 180 86 258 83 S380 70 470 52 S550 44 600 28 L600 120 L0 120Z"
+          d="M0 95 C90 94 170 91 250 84 S380 70 470 50 S545 43 600 28 L600 120 L0 120Z"
           fill="#ff7a59"
           fillOpacity=".15"
         />
         <path
-          d="M0 95 C105 93 180 86 258 83 S380 70 470 52 S550 44 600 28"
+          d="M0 95 C90 94 170 91 250 84 S380 70 470 50 S545 43 600 28"
           fill="none"
           stroke="#ff5a34"
           strokeWidth="2.5"
@@ -195,9 +188,9 @@ function MetricCard() {
       </svg>
       <div className="grid grid-cols-3 gap-3 border-t border-slate-200 pt-6 dark:border-white/10">
         {[
-          ["Interactive", "< 1.5 s"],
-          ["Monitoring", "24/7"],
-          ["Stack", "Front-end → API"],
+          ["Offline", "Sync-first"],
+          ["Retail", "24/7 unmanned"],
+          ["Platforms", "iOS · Android"],
         ].map(([label, value]) => (
           <div key={label}>
             <p className="text-[10px] uppercase tracking-[.12em] text-slate-400">
@@ -208,7 +201,7 @@ function MetricCard() {
         ))}
       </div>
       <div className="mt-6 flex flex-wrap gap-2 border-t border-slate-200 pt-6 dark:border-white/10">
-        {["Next.js", "SEO", "Core Web Vitals", "Performance"].map((tag) => (
+        {["Native iOS", "Android", "Flutter", "Offline-first"].map((tag) => (
           <span
             key={tag}
             className="rounded-full border border-slate-200 px-3 py-1 text-[11px] text-slate-600 dark:border-white/10 dark:text-slate-300"
@@ -221,7 +214,7 @@ function MetricCard() {
   );
 }
 
-export default function WebsiteDevelopmentPage() {
+export default function MobileAppDevelopmentPage() {
   const [open, setOpen] = useState(0);
   const { resolvedTheme, setTheme } = useTheme();
   return (
@@ -247,29 +240,29 @@ export default function WebsiteDevelopmentPage() {
             <span>/</span>
             <Link href="/services">SERVICES</Link>
             <span>/</span>
-            <span className="text-[#ff5a34]">WEB</span>
+            <span className="text-[#ff5a34]">MOBILE</span>
           </nav>
           <div className="mt-10 grid gap-10 pb-16 sm:mt-14 sm:gap-16 sm:pb-24 lg:grid-cols-2">
             <div>
               <p className="flex items-center gap-3 text-[11px] font-semibold tracking-[.18em] text-slate-500 dark:text-slate-400">
                 <i className="h-px w-8 bg-slate-400" />
-                DISCIPLINE 07 — OF 14
+                DISCIPLINE 08 — OF 14
               </p>
               <h1 className="mt-6 text-[44px] font-semibold leading-[1.08] tracking-tight sm:text-[56px]">
-                The web, engineered
+                Apps people keep
                 <br />
-                like a <Em>product.</Em>
+                on their <Em>home screen.</Em>
               </h1>
               <p className="mt-8 max-w-lg text-[17px] leading-relaxed text-slate-500 dark:text-slate-400">
-                Web platforms built front to back — fast, secure interfaces over
-                robust APIs, measured on the numbers that matter: speed, search
-                and conversion.
+                Native iOS, Android and cross-platform apps — offline-first,
+                instrumented, and polished to the standard that keeps people
+                coming back after work ends.
               </p>
               <div className="mt-10 grid max-w-lg grid-cols-3 gap-4 border-t border-slate-200 pt-6 sm:mt-14 sm:gap-6 sm:pt-8 dark:border-white/10">
                 {[
-                  ["50K+", "Peak concurrent users"],
-                  ["<1.5s", "Time to interactive"],
-                  ["10K+", "Pages indexed"],
+                  ["$10M+", "Valuation built on app"],
+                  ["99.5%", "Launch accuracy"],
+                  ["24/7", "Retail power"],
                 ].map(([stat, label]) => (
                   <div key={label}>
                     <strong className="text-3xl sm:text-4xl">{stat}</strong>
@@ -281,7 +274,7 @@ export default function WebsiteDevelopmentPage() {
               </div>
             </div>
             <div className="lg:pl-6">
-              <MetricCard />
+              <Metrics />
             </div>
           </div>
         </div>
@@ -290,12 +283,9 @@ export default function WebsiteDevelopmentPage() {
         <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-4 overflow-x-auto px-4 py-4 sm:px-10 sm:py-5 lg:px-16">
           <span className="shrink-0 text-[11px] tracking-[.1em] text-slate-500 dark:text-slate-400">
             <i className="mr-2 inline-block h-1.5 w-1.5 rounded-full bg-[#ff5a34]" />
-            07 — WEB APP DEVELOPMENT
+            08 — MOBILE APP DEVELOPMENT
           </span>
-          <nav
-            aria-label="Section navigation"
-            className="hidden gap-8 text-[11px] tracking-[.1em] text-slate-500 dark:text-slate-400 md:flex"
-          >
+          <nav className="hidden gap-8 text-[11px] tracking-[.1em] text-slate-500 dark:text-slate-400 md:flex">
             {nav.map((item) => (
               <a
                 key={item}
@@ -339,14 +329,14 @@ export default function WebsiteDevelopmentPage() {
           <div className="mt-6 grid gap-10 lg:grid-cols-2 lg:gap-16">
             <div>
               <Heading>
-                Most websites are brochures. Yours should be{" "}
-                <Em>infrastructure.</Em>
+                Week one downloads are easy. Week <Em>fifty-two</Em> retention
+                is engineering.
               </Heading>
               <dl className="mt-10 divide-y divide-slate-200 border-t border-slate-200 dark:divide-white/10 dark:border-white/10 sm:mt-14">
                 {[
-                  ["Discipline", "07 / 14"],
-                  ["Focus", "Web platforms"],
-                  ["Proof", "50K+ peak concurrent users"],
+                  ["Discipline", "08 / 14"],
+                  ["Focus", "iOS · Android · Cross-platform"],
+                  ["Proof", "$10M+ valuation on our apps"],
                   ["Engagement", "Senior-led · Lifetime support"],
                 ].map(([key, value]) => (
                   <div className="flex justify-between gap-5 py-5" key={key}>
@@ -360,20 +350,20 @@ export default function WebsiteDevelopmentPage() {
             </div>
             <div className="text-[17px] leading-relaxed text-slate-500 dark:text-slate-400">
               <p>
-                The web is where your customers sign up, log in, buy and judge
-                you — usually in the first two seconds. Templates and page
-                builders get you something that looks finished; they cannot give
-                you something that performs under load, ranks on intent and
-                converts visitors into revenue.
+                Most apps are abandoned within days — not because the idea was
+                wrong, but because the app was slow on a three-year-old Android,
+                lost data in a dead zone, or nagged with notifications nobody
+                wanted. Retention is not a marketing problem. It is an
+                engineering standard.
               </p>
               <p className="mt-6">
-                We engineer web platforms the way we engineer everything:
-                performance budgets enforced in CI, SEO designed into the
-                architecture, and accessibility as a default — not an audit
-                finding.{" "}
+                Our apps run businesses: fridges unlocked by scan at 3 a.m.,
+                shifts booked by NFC access doors of staff, meals paid for in
+                tap-to-pay.{" "}
                 <strong className="text-[#0d0f21] dark:text-white">
-                  The same stack has carried live events past fifty thousand
-                  concurrent viewers without blinking.
+                  Offline-first sync, native payments and analytics are
+                  foundations in every build — because the app that works once
+                  is not the one people keep.
                 </strong>
               </p>
               <div className="mt-14 border-t border-slate-200 pt-6 dark:border-white/10">
@@ -381,8 +371,9 @@ export default function WebsiteDevelopmentPage() {
                   SHIPPED WITH THIS DISCIPLINE
                 </p>
                 {[
-                  ["AudioBounce", "Under 4 min to site"],
-                  ["Bizzabo", "50K+ concurrent"],
+                  ["FeelEat — Happy Fridge", "$10M+ valuation"],
+                  ["TapTime", "99.5% accuracy"],
+                  ["HappyBee", "24/7 retail"],
                 ].map(([name, stat]) => (
                   <div
                     key={name}
@@ -407,11 +398,11 @@ export default function WebsiteDevelopmentPage() {
           <Label>WHAT YOU GET</Label>
           <div className="mt-6 grid gap-10 lg:grid-cols-2 lg:items-end">
             <Heading>
-              Front-end to <Em>API.</Em>
+              Shipped to both <Em>stores.</Em>
             </Heading>
             <p className="max-w-md text-[17px] leading-relaxed text-slate-500 dark:text-slate-400 lg:justify-self-end">
-              One team owns the whole surface — interface, backend and the
-              pipeline between them.
+              Whatever the platform strategy, the standard is identical: fast,
+              offline-capable, instrumented.
             </p>
           </div>
           <div className="mt-14 grid overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 sm:grid-cols-2 lg:grid-cols-3 dark:border-white/10 dark:bg-white/10">
@@ -437,11 +428,11 @@ export default function WebsiteDevelopmentPage() {
           <Label>HOW WE DELIVER</Label>
           <div className="mt-6 grid gap-10 lg:grid-cols-2 lg:items-end">
             <Heading>
-              Measured, not <Em>vibes-based.</Em>
+              Polish is a process, not a <Em>final sprint.</Em>
             </Heading>
             <p className="max-w-md text-[17px] leading-relaxed text-slate-500 dark:text-slate-400 lg:justify-self-end">
-              Every build carries explicit budgets — speed, ranking, conversion
-              — and ships against them.
+              Quality that survives the store review and the three-star rage
+              review alike.
             </p>
           </div>
           <div className="mt-14 grid gap-10 border-t border-slate-300/70 pt-10 sm:grid-cols-2 lg:grid-cols-4 dark:border-white/10">
@@ -475,13 +466,12 @@ export default function WebsiteDevelopmentPage() {
               We have <Em>shipped</Em> this before.
             </Heading>
             <p className="max-w-md text-[17px] leading-relaxed text-slate-500 dark:text-slate-400 lg:justify-self-end">
-              A web platform that streams studio-quality live events to tens of
-              thousands — built on the engineering bedrock this product
-              deserves.
+              The mobile app at the heart of a $10M+ connected-retail business —
+              browse, scan, unlock, pay.
             </p>
           </div>
           <div className="mt-14 grid overflow-hidden rounded-3xl border border-slate-200 shadow-[0_30px_60px_-30px_rgba(15,15,40,.25)] lg:grid-cols-[1.1fr_1fr] dark:border-white/10">
-            <div className="relative min-h-[270px] overflow-hidden bg-[#17213a]">
+            <div className="relative min-h-[270px] overflow-hidden bg-[#dbe9d5]">
               <video
                 className="h-full w-full object-cover"
                 autoPlay
@@ -490,22 +480,24 @@ export default function WebsiteDevelopmentPage() {
                 playsInline
                 preload="metadata"
               >
-                <source src="/bizzabo.mp4" type="video/mp4" />
+                <source src="/feeleat-happy-fridge.mp4" type="video/mp4" />
               </video>
             </div>
             <article className="bg-white p-8 dark:bg-[#1b2236] sm:p-10">
-              <Label>CASE STUDY · WEB · SAAS</Label>
-              <h3 className="mt-4 text-2xl font-semibold">Bizzabo</h3>
+              <Label>CASE STUDY · MOBILE · IOT</Label>
+              <h3 className="mt-4 text-2xl font-semibold">
+                FeelEat — Happy Fridge
+              </h3>
               <p className="mt-4 text-[15px] leading-relaxed text-slate-500 dark:text-slate-400">
-                An all-in-one event experience OS for virtual, in-person and
-                hybrid events — studio-quality live streaming and audience
-                interaction for thousands.
+                Browse daily meals, unlock a contactless smart fridge, pay
+                in-app and access healthy food in an urban retail, allergen and
+                food waste included.
               </p>
               <div className="mt-10 grid grid-cols-3 gap-4 border-t border-slate-200 pt-8 dark:border-white/10">
                 {[
-                  ["50K+", "Peak users"],
-                  ["10K+", "Sessions"],
-                  ["<1.5s", "Interactive start"],
+                  ["$10M+", "Valuation"],
+                  ["−90%", "Less waste"],
+                  ["24/7", "Retail"],
                 ].map(([stat, label]) => (
                   <div key={label}>
                     <strong className="text-2xl">{stat}</strong>
@@ -530,8 +522,8 @@ export default function WebsiteDevelopmentPage() {
               Chosen for the <Em>problem,</Em> not the résumé.
             </Heading>
             <p className="max-w-md text-[17px] leading-relaxed text-slate-500 dark:text-slate-400 lg:justify-self-end">
-              The boring-modern web stack: fast to build, easy to hire for, hard
-              to outgrow.
+              Native where it matters, shared where it pays — every choice
+              aligned to your retention metric.
             </p>
           </div>
           <div className="mt-14 divide-y divide-slate-200 border-t border-slate-200 dark:divide-white/10 dark:border-white/10">
@@ -566,7 +558,7 @@ export default function WebsiteDevelopmentPage() {
               One team. <Em>Zero</Em> hand-offs.
             </Heading>
             <p className="max-w-md text-[17px] leading-relaxed text-slate-500 dark:text-slate-400 lg:justify-self-end">
-              Disciplines most often combined with web platforms — same
+              Disciplines most often combined with mobile apps — same
               architecture, same engineers, no integration tax.
             </p>
           </div>
@@ -605,9 +597,8 @@ export default function WebsiteDevelopmentPage() {
               Questions, <Em>answered.</Em>
             </Heading>
             <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-slate-500 dark:text-slate-400">
-              The things buyers of web platforms ask us most. Anything else —
-              put it in a brief; a senior engineer replies within a business
-              day.
+              The things buyers of mobile apps ask us most. Anything else — put
+              it in a brief; a senior engineer replies within a business day.
             </p>
           </div>
           <div className="rounded-2xl border border-indigo-100 bg-indigo-50/70 p-7 dark:border-white/10 dark:bg-[#1b2236]">
@@ -670,11 +661,12 @@ export default function WebsiteDevelopmentPage() {
         <div className="mx-auto max-w-[900px] px-4 py-24 text-center sm:px-10 sm:py-28">
           <Label>LET&apos;S SCOPE IT</Label>
           <h2 className="mx-auto mt-6 max-w-2xl text-[40px] font-semibold leading-[1.15] tracking-tight text-white sm:text-[52px]">
-            Need a web platform that <Em>earns its keep?</Em>
+            Have an app your users <Em>should love?</Em>
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-[16px] leading-relaxed text-white/60">
-            A senior engineer replies within one business day with an honest
-            path to speed, search, conversion — or a clearer next step.
+            Tell us the job the app must do and who it is for. A senior mobile
+            engineer replies within one business day with platform advice and a
+            clear next step.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
@@ -692,13 +684,6 @@ export default function WebsiteDevelopmentPage() {
           </div>
         </div>
       </section>
-      <a
-        href="#top"
-        aria-label="Back to top"
-        className="fixed bottom-6 left-6 grid h-11 w-11 place-items-center rounded-full border border-slate-200 bg-white text-lg shadow-lg dark:border-white/10 dark:bg-[#1b2236]"
-      >
-        ↑
-      </a>
     </div>
   );
 }

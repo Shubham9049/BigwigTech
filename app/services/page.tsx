@@ -24,13 +24,13 @@ const services = [
   [
     "SaaS App Development",
     "Multi-tenant SaaS platforms with billing, RBAC, and analytics baked in.",
-    "/saas-development",
+    "/saas-app-development",
     "SaaS • Integrations • Automation",
   ],
   [
     "ERP & Business Automation",
     "Internal platforms that replace spreadsheets with auditable workflows.",
-    "/erp-automation",
+    "/erp-business-automation",
     "ERP • Planning • Integrations • Reporting",
   ],
   [
@@ -42,13 +42,13 @@ const services = [
   [
     "Web App Development",
     "Modern web apps, dashboards, and portals engineered for performance and scale.",
-    "/web-development",
+    "/website-development",
     "Frontend • Backend • Commerce • UX",
   ],
   [
     "Mobile App Development",
     "Native and cross-platform apps that ship to App Store and Play Store.",
-    "/mobile-apps",
+    "/mobile-app-development",
     "React Native • iOS • Android",
   ],
   [
@@ -60,7 +60,7 @@ const services = [
   [
     "Audio & Video Streaming",
     "Live and VOD platforms that survive a viral spike at 3 a.m.",
-    "/streaming-platforms",
+    "/audio-video-streaming",
     "Live • Encoding • DRM • CDN",
   ],
   [

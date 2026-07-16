@@ -16,6 +16,8 @@ import {
   Smartphone,
   Video,
   Code2,
+  BookA,
+  BlocksIcon,
 } from "lucide-react";
 
 const services = [
@@ -65,13 +67,7 @@ const services = [
     icon: Smartphone,
     title: "Mobile Apps",
     desc: "iOS & Android applications.",
-    href: "/mobile-apps",
-  },
-  {
-    icon: Cloud,
-    title: "DevOps & Cloud",
-    desc: "AWS, Azure & scalable infrastructure.",
-    href: "/devops-cloud",
+    href: "/mobile-app-development",
   },
   {
     icon: Radio,
@@ -81,15 +77,34 @@ const services = [
   },
   {
     icon: Video,
-    title: "Streaming Platforms",
+    title: "Audio Video Streaming",
     desc: "Live & VOD systems.",
-    href: "/streaming-platforms",
+    href: "/audio-video-streaming",
   },
+  {
+    icon: BookA,
+    title: "white-label-solutions",
+    desc: "Battle-tested platforms re-skinned",
+    href: "/white-label-solutions",
+  },
+
   {
     icon: Pencil,
     title: "UI / UX Design",
     desc: "Research-driven product design.",
     href: "/ui-ux-design",
+  },
+  {
+    icon: Cloud,
+    title: "DevOps & Cloud",
+    desc: "AWS, Azure & scalable infrastructure.",
+    href: "/devops-cloud",
+  },
+  {
+    icon: BlocksIcon,
+    title: "Blockchain/Web3",
+    desc: "Smart contracts, token systems and dApps engineered",
+    href: "/blockchain-web3",
   },
 ];
 
@@ -107,7 +122,7 @@ export default function ServicesMegaMenu({
       exit={{ opacity: 0, y: 15 }}
       transition={{ duration: 0.25 }}
       id="services-mega-menu"
-      className="absolute left-1/2 top-full z-50 mt-4 w-[min(94vw,1800px)] -translate-x-1/2 rounded-[28px] border border-[#dfe3ee] bg-[#f9faff] px-6 py-8 shadow-[0_28px_64px_rgba(38,48,86,.14)] lg:px-10 lg:py-12"
+      className="absolute left-1/2 top-full z-50 mt-4 max-h-[calc(100dvh-7.5rem)] w-[min(94vw,1800px)] -translate-x-1/2 overflow-y-auto overscroll-contain rounded-[28px] border border-[#dfe3ee] bg-[#f9faff] px-6 py-8 shadow-[0_28px_64px_rgba(38,48,86,.14)] lg:px-10 lg:py-12"
     >
       <div className="mb-9 flex items-center justify-between">
         <h3 className="text-sm font-semibold uppercase tracking-[6px] text-[#66708d]">
