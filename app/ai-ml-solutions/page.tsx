@@ -206,7 +206,7 @@ export default function AiMlSolutionsPage() {
   return (
     <div
       id="top"
-      className={`${styles.page} min-h-screen bg-[#f4f4fa] text-[#0d0f21]`}
+      className={`${styles.page} -mt-24 min-h-screen pt-24 bg-[#f4f4fa] text-[#0d0f21]`}
     >
       {/* ============ HERO ============ */}
       <main className="relative overflow-hidden">
