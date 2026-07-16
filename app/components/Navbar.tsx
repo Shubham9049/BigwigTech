@@ -113,19 +113,19 @@ export default function Navbar() {
       ref={headerRef}
       initial={false}
       animate={{
-        y: sticky ? 15 : 0,
+        y: sticky ? 8 : 0,
       }}
       transition={{
         duration: 0.35,
       }}
-      className={`fixed left-1/2 z-50 w-[calc(100%-1.5rem)] -translate-x-1/2 min-[1280px]:w-[92%]
+      className={`fixed left-1/2 z-50 w-[calc(100%-2rem)] max-w-[1725px] -translate-x-1/2 min-[1280px]:w-[88%]
       ${
         sticky
-          ? "top-0 rounded-[2rem] border border-neutral-200 bg-white shadow-xl backdrop-blur-md dark:border-white/10 dark:bg-[#171b2d] min-[1280px]:w-[92%] min-[1280px]:rounded-full"
-          : "top-5 bg-transparent min-[1280px]:w-[92%]"
+          ? "top-2 rounded-[2rem] border border-neutral-200 bg-white shadow-xl backdrop-blur-md dark:border-white/10 dark:bg-[#171b2d] min-[1280px]:w-[88%] min-[1280px]:rounded-full"
+          : "top-2 bg-transparent min-[1280px]:w-[88%]"
       }`}
     >
-      <div className="flex h-20 items-center justify-between gap-5 px-4 sm:px-6 xl:px-8">
+      <div className="flex h-[72px] items-center justify-between gap-4 px-4 sm:px-6 xl:px-8">
         {/* Logo */}
 
         <Link href="/" className="flex shrink-0 items-center gap-3">

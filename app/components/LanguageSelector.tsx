@@ -98,7 +98,7 @@ export default function LanguageSelector({
     window.location.replace(window.location.href);
   };
 
-  const buttonSize = variant === "footer" ? "h-[60px] px-5" : "h-12 px-4";
+  const buttonSize = variant === "footer" ? "h-10 px-4" : "h-12 px-4";
 
   return (
     <div ref={wrapperRef} className={`relative ${className}`}>
@@ -109,7 +109,7 @@ export default function LanguageSelector({
         aria-haspopup="listbox"
         className={`language-selector flex ${buttonSize} w-full items-center justify-center gap-2 rounded-full border border-[#c9cfdf] bg-white/55 text-sm font-semibold text-[#252c45] shadow-[0_5px_16px_rgba(45,56,94,.06)] transition hover:border-[#7e8cff] hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#4057f4]`}
       >
-        <Globe2 size={variant === "footer" ? 21 : 19} strokeWidth={1.9} />
+        <Globe2 size={variant === "footer" ? 17 : 19} strokeWidth={1.9} />
         <span>{selectedLanguage.label}</span>
         <ChevronDown
           size={16}
