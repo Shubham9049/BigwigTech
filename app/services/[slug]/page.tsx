@@ -5,7 +5,7 @@ const serviceNames: Record<string, string> = {
   "ai-ml-solutions": "AI / ML Solutions",
   "ai-agents": "AI Agents",
   "data-engineering": "Data Engineering",
-  "saas-development": "SaaS Development",
+  "saas-app-development": "SaaS Development",
   "erp-automation": "ERP Automation",
   "web-development": "Web Development",
   "mobile-apps": "Mobile Apps",
@@ -13,6 +13,7 @@ const serviceNames: Record<string, string> = {
   "iot-solutions": "IoT Solutions",
   "streaming-platforms": "Streaming Platforms",
   "ui-ux-design": "UI / UX Design",
+  "blockchain-web3": "Blockchain / Web3",
 };
 
 export default async function ServiceDetailPage({
