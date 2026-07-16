@@ -666,13 +666,6 @@ export default function SaasAppDevelopmentPage() {
           </div>
         </div>
       </section>
-      <a
-        href="#top"
-        aria-label="Back to top"
-        className="fixed bottom-6 left-6 grid h-11 w-11 place-items-center rounded-full border border-slate-200 bg-white text-lg shadow-lg dark:border-white/10 dark:bg-[#1b2236]"
-      >
-        ↑
-      </a>
     </div>
   );
 }

@@ -16,6 +16,8 @@ import {
   Smartphone,
   Video,
   Code2,
+  BookA,
+  BlocksIcon,
 } from "lucide-react";
 
 const services = [
@@ -65,13 +67,7 @@ const services = [
     icon: Smartphone,
     title: "Mobile Apps",
     desc: "iOS & Android applications.",
-    href: "/mobile-apps",
-  },
-  {
-    icon: Cloud,
-    title: "DevOps & Cloud",
-    desc: "AWS, Azure & scalable infrastructure.",
-    href: "/devops-cloud",
+    href: "/mobile-app-development",
   },
   {
     icon: Radio,
@@ -81,15 +77,34 @@ const services = [
   },
   {
     icon: Video,
-    title: "Streaming Platforms",
+    title: "Audio Video Streaming",
     desc: "Live & VOD systems.",
-    href: "/streaming-platforms",
+    href: "/audio-video-streaming",
   },
+  {
+    icon: BookA,
+    title: "white-label-solutions",
+    desc: "Battle-tested platforms re-skinned",
+    href: "/white-label-solutions",
+  },
+
   {
     icon: Pencil,
     title: "UI / UX Design",
     desc: "Research-driven product design.",
     href: "/ui-ux-design",
+  },
+  {
+    icon: Cloud,
+    title: "DevOps & Cloud",
+    desc: "AWS, Azure & scalable infrastructure.",
+    href: "/devops-cloud",
+  },
+  {
+    icon: BlocksIcon,
+    title: "Blockchain/Web3",
+    desc: "Smart contracts, token systems and dApps engineered",
+    href: "/blockchain-web3",
   },
 ];
 
