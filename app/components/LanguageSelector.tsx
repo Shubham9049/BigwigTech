@@ -119,14 +119,16 @@ export default function LanguageSelector({
 
       {open && (
         <div
-          className="language-selector-menu absolute right-0 top-full z-[100] mt-3 w-72 overflow-hidden rounded-[22px] border border-[#d7dceb] bg-[#fbfcff] p-2 shadow-[0_24px_65px_rgba(34,45,82,.2)]"
+          className={`language-selector-menu z-[100] overflow-hidden rounded-[22px] border border-[#d7dceb] bg-[#fbfcff] p-2 shadow-[0_24px_65px_rgba(34,45,82,.2)] ${variant === "mobile" ? "fixed inset-x-4 top-24 bottom-4 w-auto" : "absolute right-0 top-full mt-3 w-72"}`}
           role="listbox"
           aria-label="Select language"
         >
           <p className="px-3 pb-2 pt-1 text-[10px] font-bold uppercase tracking-[.18em] text-[#7b86a5]">
             Choose language
           </p>
-          <div className="max-h-80 overflow-y-auto pr-1">
+          <div
+            className={`overflow-y-auto pr-1 ${variant === "mobile" ? "h-[calc(100dvh-9rem)] max-h-full" : "max-h-[min(20rem,calc(100dvh-9rem))]"}`}
+          >
             {languages.map((item) => {
               const selected = language === item.code;
               return (

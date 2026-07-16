@@ -296,7 +296,7 @@ export default function Navbar() {
                 <Moon size={19} className="block dark:hidden" />
               </button>
               <div className="notranslate">
-                <LanguageSelector />
+                <LanguageSelector variant="mobile" />
               </div>
               <button
                 type="button"
