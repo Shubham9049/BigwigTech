@@ -225,9 +225,7 @@ export default function Navbar() {
       <AnimatePresence>
         {activeMenu === "services" && (
           <ServicesMegaMenu
-            onNavigate={function (): void {
-              throw new Error("Function not implemented.");
-            }}
+            onNavigate={() => setActiveMenu(null)}
           />
         )}
       </AnimatePresence>

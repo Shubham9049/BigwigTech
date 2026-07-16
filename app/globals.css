@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* Keep Tailwind's dark: utilities in sync with next-themes' .dark class.
+   Without this, Tailwind v4 follows the device colour scheme even when the
+   site has been explicitly switched to light mode. */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #f3f5ff;
   --foreground: #24283b;

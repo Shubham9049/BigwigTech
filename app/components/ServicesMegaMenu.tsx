@@ -15,6 +15,7 @@ import {
   Radio,
   Smartphone,
   Video,
+  Code2,
 } from "lucide-react";
 
 const services = [
@@ -40,19 +41,25 @@ const services = [
     icon: Monitor,
     title: "SaaS Development",
     desc: "Multi-tenant SaaS platforms.",
-    href: "/saas-development",
+    href: "/saas-app-development",
   },
   {
     icon: Blocks,
     title: "ERP Automation",
     desc: "Internal workflow automation.",
-    href: "/erp-automation",
+    href: "/erp-business-automation ",
+  },
+  {
+    icon: Code2,
+    title: "Custom Product Development",
+    desc: "Bespoke systems engineered ",
+    href: "/custom-product-development",
   },
   {
     icon: Globe,
     title: "Web Development",
     desc: "High performance web apps.",
-    href: "/web-development",
+    href: "/website-development",
   },
   {
     icon: Smartphone,
