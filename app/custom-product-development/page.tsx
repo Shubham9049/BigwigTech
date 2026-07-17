@@ -638,7 +638,7 @@ export default function CustomProductDevelopmentPage() {
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
-              href="mailto:sales@codttech.com"
+              href="mailto:sales@Bigwig.com"
               className="rounded-full bg-gradient-to-r from-[#ff5a34] to-[#ff7a59] px-7 py-3.5 text-[13px] font-semibold text-white"
             >
               Book an intro call →

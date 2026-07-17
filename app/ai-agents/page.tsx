@@ -901,10 +901,10 @@ export default function AiAgentsPage() {
                     Put it in a brief →
                   </a>
                   <a
-                    href="mailto:sales@codttech.com"
+                    href="mailto:sales@Bigwig.com"
                     className="text-[13px] font-medium text-slate-500 transition-colors hover:text-[#0d0f21]"
                   >
-                    sales@codttech.com
+                    sales@Bigwig.com
                   </a>
                 </div>
               </div>
@@ -958,7 +958,6 @@ export default function AiAgentsPage() {
           </div>
         </div>
       </section>
-
     </div>
   );
 }

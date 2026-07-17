@@ -577,7 +577,7 @@ export default function DevOpsCloudPage() {
               within one business day.
             </p>
             <a
-              href="mailto:contact@codttech.com"
+              href="mailto:contact@Bigwig.com"
               className="mt-7 inline-flex rounded-full bg-[#0d0f21] px-5 py-3 text-[12px] font-semibold text-white dark:bg-white dark:text-[#0d0f21]"
             >
               Put in a brief
@@ -637,7 +637,7 @@ export default function DevOpsCloudPage() {
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
-              href="mailto:contact@codttech.com"
+              href="mailto:contact@Bigwig.com"
               className="rounded-full bg-gradient-to-r from-[#ff5a34] to-[#ff7a59] px-7 py-3.5 text-[13px] font-semibold text-white"
             >
               Book an intro call →

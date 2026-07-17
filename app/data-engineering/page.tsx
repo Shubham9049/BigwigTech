@@ -255,17 +255,13 @@ export default function DataEngineeringAnalyticsPage() {
 
               <div className="mt-10 grid max-w-lg grid-cols-3 gap-4 border-t border-slate-200 pt-6 dark:border-white/10 sm:mt-14 sm:gap-6 sm:pt-8">
                 <div>
-                  <div className="text-3xl font-semibold sm:text-4xl">
-                    24/7
-                  </div>
+                  <div className="text-3xl font-semibold sm:text-4xl">24/7</div>
                   <div className="mt-2 text-[11px] font-medium uppercase tracking-[0.1em] text-slate-500 dark:text-slate-400">
                     Pipelines monitored
                   </div>
                 </div>
                 <div>
-                  <div className="text-3xl font-semibold sm:text-4xl">
-                    40+
-                  </div>
+                  <div className="text-3xl font-semibold sm:text-4xl">40+</div>
                   <div className="mt-2 text-[11px] font-medium uppercase tracking-[0.1em] text-slate-500 dark:text-slate-400">
                     Products shipped
                   </div>
@@ -902,13 +898,13 @@ export default function DataEngineeringAnalyticsPage() {
                 within one business day.
               </p>
               <a
-                href="mailto:sales@codttech.com"
+                href="mailto:sales@Bigwig.com"
                 className="mt-5 block w-full rounded-full bg-[#0d0f21] px-5 py-2.5 text-center text-[11px] font-semibold tracking-[0.1em] text-white transition-colors hover:bg-[#1c1f3a] dark:bg-white dark:text-[#0d0f21] dark:hover:bg-slate-200"
               >
                 PUT IT IN A BRIEF
               </a>
               <div className="mt-3 text-center text-[12px] text-slate-400 dark:text-slate-500">
-                sales@codttech.com
+                sales@Bigwig.com
               </div>
             </div>
           </div>

@@ -6,27 +6,27 @@ import { useLayoutEffect, useRef } from "react";
 
 const questions = [
   {
-    question: "What is CODT Technologies?",
+    question: "What is Bigwig Technologies?",
     answer:
-      "CODT Technologies is an enterprise software engineering firm that designs, builds, and operates production software — mobile apps, SaaS platforms, AI agents, and IoT systems — for founders, scale-ups, and enterprises.",
+      "Bigwig Technologies is an enterprise software engineering firm that designs, builds, and operates production software — mobile apps, SaaS platforms, AI agents, and IoT systems — for founders, scale-ups, and enterprises.",
   },
   {
-    question: "What services does CODT Technologies offer?",
+    question: "What services does Bigwig Technologies offer?",
     answer:
       "We cover the full product lifecycle: mobile and web app development, SaaS platforms, custom product engineering, AI and AI agents, IoT systems, UI/UX design, data engineering, DevOps, cloud, and business automation.",
   },
   {
-    question: "Where is CODT Technologies located?",
+    question: "Where is Bigwig Technologies located?",
     answer:
       "Our teams work across India and California, supporting ambitious companies in more than ten countries with close, senior-level collaboration from discovery through launch and beyond.",
   },
   {
-    question: "How do I start a project with CODT Technologies?",
+    question: "How do I start a project with Bigwig Technologies?",
     answer:
       "Start with a conversation about your product, goals, timeline, and constraints. We will help shape the clearest next step — whether that is discovery, a focused sprint, or a delivery plan.",
   },
   {
-    question: "Why do clients choose CODT Technologies?",
+    question: "Why do clients choose Bigwig Technologies?",
     answer:
       "Clients choose us for senior expertise, accountable partnership, and software built around real outcomes. The same people who shape the product stay close to the work as it grows.",
   },

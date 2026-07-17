@@ -7,7 +7,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 const testimonials = [
   {
     quote:
-      "Over 8 years, CODT Technologies delivered an exceptional ERP system for FeelEat, showcasing top-notch project management, technical expertise, and proactive problem-solving. Their innovative and cost-effective solutions consistently exceeded expectations, ensuring smooth and efficient operations.",
+      "Over 8 years, Bigwig Technologies delivered an exceptional ERP system for FeelEat, showcasing top-notch project management, technical expertise, and proactive problem-solving. Their innovative and cost-effective solutions consistently exceeded expectations, ensuring smooth and efficient operations.",
     name: "Jonathan Strauss",
     role: "Co-Founder · FeelEat",
     initials: "JS",
@@ -15,7 +15,7 @@ const testimonials = [
   },
   {
     quote:
-      "CODT Technologies provided outstanding solutions, ensuring smooth integration. Skilled team expertly managed projects, delivering creative insights and progressive strategies. CODT Technologies emerged as an invaluable, exceptional partner in Happy Bee's success.",
+      "Bigwig Technologies provided outstanding solutions, ensuring smooth integration. Skilled team expertly managed projects, delivering creative insights and progressive strategies. Bigwig Technologies emerged as an invaluable, exceptional partner in Happy Bee's success.",
     name: "Marco Barboza",
     role: "Co-Founder · Happy Bee",
     initials: "MB",

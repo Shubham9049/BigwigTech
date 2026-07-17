@@ -1,10 +1,4 @@
-import {
-  ArrowRight,
-  Mail,
-  MapPin,
-  Phone,
-  X,
-} from "lucide-react";
+import { ArrowRight, Mail, MapPin, Phone, X } from "lucide-react";
 import type { ReactNode } from "react";
 import {
   FaLinkedinIn,
@@ -116,7 +110,7 @@ export default function Footer() {
               </a>
             </div>
           </div>
-            <div className="space-y-7 sm:space-y-10">
+          <div className="space-y-7 sm:space-y-10">
             <Office title="Milpitas, California">
               PO Box 1090, S Milpitas Blvd, PMB 2006
               <br />
@@ -132,7 +126,7 @@ export default function Footer() {
 
         <div className="flex flex-col gap-4 border-t border-[#cfd4e3] py-5 text-xs text-[#58678f] lg:flex-row lg:items-center lg:justify-between">
           <p className="text-xs leading-5 tracking-[-.025em] sm:text-sm">
-            © 2026 CODT Technologies Pvt. Ltd. All rights reserved.
+            © 2026 Bigwig Technologies Pvt. Ltd. All rights reserved.
           </p>
           <div className="grid grid-cols-2 items-center gap-x-4 gap-y-2 font-medium sm:flex sm:flex-wrap sm:gap-x-6">
             <a className="footer-link" href="#">
@@ -147,7 +141,10 @@ export default function Footer() {
             <a className="footer-link" href="#">
               Cookie preferences
             </a>
-            <LanguageSelector className="col-span-2 w-full sm:ml-1 sm:w-auto sm:min-w-[118px]" variant="footer" />
+            <LanguageSelector
+              className="col-span-2 w-full sm:ml-1 sm:w-auto sm:min-w-[118px]"
+              variant="footer"
+            />
           </div>
         </div>
       </div>
