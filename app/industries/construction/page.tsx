@@ -15,158 +15,168 @@ import {
   Cloud,
   Music,
   Clapperboard,
+  HeartPulse,
+  Phone,
+  ShoppingCart,
+  Bot,
+  Landmark,
+  Building2,
+  Globe,
+  GraduationCap,
+  Pencil,
+  House,
 } from "lucide-react";
 
 const technologies = [
-  "WebRTC",
-  "RTMP / HLS",
-  "FFmpeg",
+  "React Native",
+  "Offline sync (CRDT)",
   "Node.js",
-  "Go",
-  "Redis",
-  "CDN (multi-region)",
-  "AWS Media",
+  "Postgres",
+  "BIM / IFC viewers",
+  "Rugged-device support",
+  "S3 / media",
+  "AWS",
 ];
 
 const systems = [
   {
     id: "01",
-    title: "OTT & VOD platforms",
+    title: "Field operations & daily logs",
     description:
-      "Subscription and ad-supported video products with catalogues, entitlements, DRM and recommendations.",
+      "Site reports, photos, inspections and timesheets captured offline and synced automatically when back in range.",
   },
   {
     id: "02",
-    title: "Low-latency live",
+    title: "Project management",
     description:
-      "WebRTC and RTMP pipelines tuned for sub-second start and real-time interaction at scale.",
+      "Schedules, tasks, RFIs and submittals that keep office and site working from one live plan.",
   },
   {
     id: "03",
-    title: "Creator & UGC video",
+    title: "Drawings & BIM-adjacent",
     description:
-      "Upload, transcode, moderation and monetisation systems for creator-led video at volume.",
+      "Plan viewing, markups and model references usable on a tablet at the work face.",
   },
   {
     id: "04",
-    title: "Live event experience",
+    title: "Safety & compliance",
     description:
-      "Streaming woven into registration, chat, Q&A and analytics for virtual and hybrid events.",
+      "Inspections, permits and incident reporting with the trail an audit or claim will demand.",
   },
   {
     id: "05",
-    title: "Real-time chat & interaction",
+    title: "Equipment & resources",
     description:
-      "Reactions, polls and chat that stay in sync with the stream even under a viral load.",
+      "Asset, material and crew tracking so the right people and kit are where the schedule needs them.",
   },
   {
     id: "06",
-    title: "Monetisation & rights",
+    title: "Cost & progress tracking",
     description:
-      "Subscriptions, pay-per-view, ad insertion and content protection built into the platform.",
+      "Budget, change orders and progress measured against plan in real time.",
   },
 ];
 
 const outcomes = [
   {
-    value: "50K+",
-    label: "Peak concurrent viewers held",
+    value: "Offline-first",
+    label: "Full function with no signal",
   },
   {
-    value: "<1.5s",
-    label: "Stream start time",
+    value: "One",
+    label: "Live source of truth",
   },
   {
-    value: "10K+",
-    label: "Events streamed",
+    value: "Time-stamped",
+    label: "Evidence for every claim",
   },
   {
-    value: "Every",
-    label: "Device & network reached",
+    value: "Rugged",
+    label: "Built for real site conditions",
   },
 ];
 
 const principles = [
   {
     id: "01",
-    title: "Engineered for the spike",
+    title: "Offline is the default",
     description:
-      "We design for your worst-case concurrency, then load-test to it — the launch night is the spec, not the surprise.",
+      "Everything works with zero bars and reconciles on reconnect — the basement level is the design target, not the edge case.",
   },
   {
     id: "02",
-    title: "Latency as a feature",
+    title: "Built for gloves and glare",
     description:
-      "Every architecture decision is weighed against join time and glass-to-glass delay, because that is what viewers feel.",
+      "Big touch targets, high contrast and rugged-device support so the tool works in real site conditions.",
   },
   {
     id: "03",
-    title: "Every device, every network",
+    title: "One source of truth",
     description:
-      "Adaptive delivery so a phone on cellular and a TV on fibre both get the best stream their connection allows.",
+      "Office and field write to the same live project, so nobody builds off a drawing that changed yesterday.",
   },
   {
     id: "04",
-    title: "Observability built in",
+    title: "Evidence for claims",
     description:
-      "Real-time dashboards on quality, buffering and concurrency, so you see a problem before the audience tweets it.",
+      "Photos, logs and inspections are time-stamped and traceable, so disputes are settled with records, not memory.",
   },
 ];
 
 const audiences = [
-  "OTT & streaming services",
-  "Live & hybrid event platforms",
-  "Creator & UGC video products",
-  "Sports & live entertainment",
-  "Media & broadcast",
-  "Conferencing & webinar tools",
+  "General contractors",
+  "Subcontractors & trades",
+  "Civil & infrastructure",
+  "Real-estate developers",
+  "Field-service operations",
+  "Engineering & BIM teams",
 ];
 
 const relatedServices = [
   {
-    title: "SaaS App Development",
-    icon: Monitor,
-    href: "/saas-app-development",
+    title: "Custom Product Development",
+    icon: Code2,
+    href: "/custom-product-development",
   },
   {
-    title: "Audio & Video Streaming Platforms",
-    icon: Music,
-    href: "/audio-video-streaming",
+    title: "Mobile App Development",
+    icon: Phone,
+    href: "/mobile-app-development",
   },
   {
-    title: "DevOps & Cloud (AWS)",
-    icon: Cloud,
-    href: "/devops-cloud",
+    title: "IoT Solutions",
+    icon: Radio,
+    href: "/iot-solutions",
   },
 ];
 
 const nextIndustry = {
-  number: "04",
+  number: "10",
   total: "15",
-  title: "Healthcare",
-  href: "/industries/healthcare",
+  title: "Insurance ",
+  href: "/industries/insurance",
 };
 
 const faqs = [
   [
-    "How many concurrent viewers can you support?",
-    "We have shipped live layers holding 50K+ concurrent viewers. We design to your peak target and load-test against it before launch.",
+    "Does it really work with no connectivity?",
+    "Yes — offline-first is the design default. Logs, inspections and markups are captured with zero signal and reconcile automatically when a connection returns.",
   ],
   [
-    "WebRTC, RTMP or HLS — which do you use?",
-    "Whichever the use case demands. Sub-second interaction leans WebRTC; large broadcast leans low-latency HLS. We pick per the latency and scale you need.",
+    "Can it run on rugged site tablets?",
+    "We build for rugged devices with large touch targets and high contrast, so the tool works with gloves and in bright sun.",
   ],
   [
-    "Can you handle DRM and content protection?",
-    "Yes — entitlements, token-gated playback and studio DRM are part of the OTT and VOD builds we deliver.",
+    "Do you integrate with BIM or drawing tools?",
+    "We deliver plan viewing, markups and BIM-adjacent model references usable on site, and integrate with the drawing systems you already use.",
   ],
   [
-    "Will the stream hold up on poor connections?",
-    "Adaptive bitrate delivery means each viewer gets the best quality their network sustains, with graceful fallback rather than a frozen frame.",
+    "Will it hold up as evidence in a dispute?",
+    "Photos, daily logs and inspections are time-stamped and traceable, giving you a defensible record for claims and audits.",
   ],
   [
-    "Can you build monetisation in?",
-    "Yes — Aviatize manages 1,000+ aircraft across 40+ countries, with fleet, type and jurisdiction handled as configuration.",
+    "Can office and field stay in sync?",
+    "Both write to the same live project, so the office plan and the site reality never drift apart.",
   ],
 ] as const;
 
@@ -179,7 +189,7 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
   );
 }
 
-export default function EntertainmentPage() {
+export default function ConstructionPage() {
   return (
     <div className="industries-page overflow-hidden bg-[#f6f7fd] text-[#20263a]">
       <style>{`
@@ -377,18 +387,14 @@ export default function EntertainmentPage() {
         {/* Background Number */}
         <div className="pointer-events-none absolute right-[2%] top-1/2 hidden -translate-y-1/2 select-none lg:block">
           <span className="text-[26rem] font-semibold leading-none tracking-[-0.08em] text-[#ff6d50]/5">
-            03
+            09
           </span>
         </div>
 
         {/* Floating Card */}
         <div className="absolute right-10 top-14 hidden lg:block">
           <div className="flex h-44 w-44 items-center justify-center rounded-[2rem] border border-[#ffb59f] bg-gradient-to-br from-[#ffe7e0] via-white/80 to-[#ffe9e3] shadow-[0_25px_60px_rgba(255,109,80,.12)] backdrop-blur">
-            <Clapperboard
-              size={66}
-              strokeWidth={1.8}
-              className="text-[#ff6d50]"
-            />
+            <House size={66} strokeWidth={1.8} className="text-[#ff6d50]" />
           </div>
         </div>
 
@@ -410,33 +416,34 @@ export default function EntertainmentPage() {
 
             <span className="mx-3">/</span>
 
-            <span className="text-[#ff6d50]">Entertainment</span>
+            <span className="text-[#ff6d50]">Construction</span>
           </div>
 
           {/* Industry Badge */}
           <div className="mt-10 inline-flex items-center gap-4 rounded-full border border-[#d8dce9] bg-white/75 px-5 py-3 shadow-sm backdrop-blur">
             <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-[#ff7a5d] to-[#756bff] text-white">
-              <Clapperboard size={18} />
+              <House size={18} />
             </span>
 
             <span className="text-[14px] uppercase tracking-[.18em] text-[#66728f]">
-              Industry 03 / 15 — Streaming & live events
+              Industry 09 / 15 — Field ops & project tech
             </span>
           </div>
 
           {/* Heading */}
           <h1 className="mt-12 max-w-3xl text-[clamp(3.5rem,6vw,6.2rem)] leading-[.9] tracking-[-.075em] text-[#111322]">
-            Streams that survive
+            Field software that
             <em className="font-serif font-normal text-[#ff6d50]">
-              going viral.
+              {" "}
+              works off-grid.
             </em>
           </h1>
 
           {/* Description */}
           <p className="mt-10 max-w-3xl text-[21px] leading-[1.7] text-[#55607f]">
-            OTT platforms, low-latency live event tech and creator video systems
-            — engineered to stay smooth when fifty thousand people hit play at
-            once.
+            Project management, field operations and BIM-adjacent tooling for
+            construction — offline-first, so the crew on a basement level with
+            no signal still gets the job done.
           </p>
 
           {/* Divider */}
@@ -446,31 +453,31 @@ export default function EntertainmentPage() {
           <div className="mt-10 grid gap-8 md:grid-cols-3">
             <div>
               <h3 className="text-[56px] font-semibold leading-none tracking-[-.06em] text-[#ff6d50]">
-                &lt;2.4s
+                Offline-first
               </h3>
 
               <p className="mt-3 text-[12px] uppercase tracking-[.22em] text-[#6c7696]">
-                Median join time
+                No-signal ready
               </p>
             </div>
 
             <div className="border-l border-[#d8dce9] pl-10">
               <h3 className="text-[56px] font-semibold leading-none tracking-[-.06em] text-[#ff6d50]">
-                50K+
+                Field
               </h3>
 
               <p className="mt-3 text-[12px] uppercase tracking-[.22em] text-[#6c7696]">
-                Peak concurrent viewers
+                Built for site
               </p>
             </div>
 
             <div className="border-l border-[#d8dce9] pl-10">
               <h3 className="text-[56px] font-semibold leading-none tracking-[-.06em] text-[#ff6d50]">
-                10K+
+                Live
               </h3>
 
               <p className="mt-3 text-[12px] uppercase tracking-[.22em] text-[#6c7696]">
-                Events streamed
+                Project source of truth
               </p>
             </div>
           </div>
@@ -485,26 +492,26 @@ export default function EntertainmentPage() {
           <div className="grid lg:grid-cols-[1.35fr_.65fr]">
             {/* Left */}
             <div className="relative p-8 sm:p-12 lg:p-16">
-              <Quote
+              <House
                 size={34}
                 strokeWidth={2.2}
                 className="mb-8 text-[#ff6d50]"
               />
 
               <h2 className="max-w-2xl text-[clamp(2.5rem,4.5vw,4.4rem)]  leading-[0.95] tracking-[-0.06em] text-[#111322] dark:text-white">
-                The biggest audience is
+                If it needs signal,
                 <br />
-                the hardest test.
+                it doesn’t work on site.
               </h2>
 
               <p className="mt-10 max-w-2xl text-[20px] leading-[1.75] text-[#586482] dark:text-[#b8c1da]">
-                On a live platform, success and failure arrive at the same
-                moment — the spike. We architect for the worst-case concurrency
-                from the start, weigh every decision against join time and
-                glass-to-glass latency, and deliver adaptively so every device
-                gets the best stream its network allows. We built the live layer
-                inside Bizzabo to hold 50K+ concurrent viewers with sub-second
-                starts. The launch night is the specification, not the gamble.
+                The job site is where construction software earns its keep and
+                where most of it quits — no connectivity, harsh light, gloved
+                hands. We build field-first: daily logs, inspections, drawings
+                and tasks all captured offline and synced the instant a signal
+                returns, on rugged tablets with controls you can hit wearing
+                gloves. The project stays one source of truth whether you are in
+                the trailer or thirty floors up.
               </p>
             </div>
 
@@ -512,7 +519,7 @@ export default function EntertainmentPage() {
             <div className="flex items-center justify-center border-t border-[#d9deeb] p-10 lg:border-l lg:border-t-0 dark:border-[#31384d]">
               <div className="text-center">
                 <div className="mx-auto flex h-52 w-52 items-center justify-center rounded-full border border-[#ffb7a3] bg-gradient-to-br from-[#ffe8e1] via-white to-[#fff1ec] shadow-[0_20px_50px_rgba(255,109,80,.12)]">
-                  <Clapperboard
+                  <House
                     size={70}
                     strokeWidth={1.8}
                     className="text-[#ff6d50]"
@@ -520,7 +527,7 @@ export default function EntertainmentPage() {
                 </div>
 
                 <p className="mt-8 text-[13px] font-medium uppercase tracking-[0.32em] text-[#66728f] dark:text-[#b8c1da]">
-                  Entertainment
+                  Construction
                 </p>
               </div>
             </div>
@@ -548,10 +555,10 @@ export default function EntertainmentPage() {
 
             <div className="mt-4 flex flex-wrap gap-3">
               {[
-                "OTT & VOD platforms",
-                "Low-latency live",
-                "Creator & UGC video",
-                "Live event experience",
+                "Field operations & daily logs",
+                "Project management",
+                "Drawings & BIM-adjacent",
+                "Safety & compliance",
               ].map((item) => (
                 <span
                   key={item}
@@ -566,28 +573,27 @@ export default function EntertainmentPage() {
           {/* Right */}
           <div className="space-y-10 text-[20px] leading-[1.8] text-[#55607f] dark:text-[#b8c1da]">
             <p>
-              Streaming is unforgiving: the moment your audience is biggest is
-              the moment your infrastructure is most likely to break. Buffering
-              during the keynote, a stream that won’t start, latency that kills
-              the live chat — these are the failures viewers never forgive and
-              reviewers never forget.
+              Construction software fails in a specific place: the job site. No
+              signal, gloved hands, bright sun, a tablet that has to survive a
+              drop — tools designed for an office desk simply stop working where
+              the work happens.
             </p>
 
             <p>
-              We engineered the{" "}
+              We build field-first construction tech that is{" "}
               <strong className="font-semibold text-[#111322] dark:text-white">
-                low-latency live layer inside Bizzabo’s Event Experience OS,
+                offline by default:
               </strong>{" "}
-              holding 50K+ concurrent viewers with sub-second start times. We
-              build streaming that scales with the spike instead of buckling
-              under it.
+              daily logs, inspections, drawings and tasks captured on site with
+              no bars and synced the moment a connection returns. The project
+              stays a single source of truth from the trailer to the top floor.
             </p>
 
             <p>
-              From OTT catalogues and DRM to creator upload pipelines and
-              real-time interaction, we treat latency and concurrency as
-              features to engineer — because on a live platform they are what
-              the audience actually feels.
+              And because disputes in this industry are settled with records,
+              everything we capture — photos, logs, inspections — is
+              time-stamped and traceable, so a claim is backed by evidence
+              rather than memory.
             </p>
           </div>
         </div>
@@ -606,7 +612,7 @@ export default function EntertainmentPage() {
               <h2 className="text-[clamp(3rem,5vw,5.5rem)]  leading-[.92] tracking-[-.065em] text-[#111322] dark:text-white">
                 Systems for{" "}
                 <em className="font-serif font-normal text-[#ff6d50]">
-                  entertainment.
+                  Construction.
                 </em>
               </h2>
             </div>
@@ -957,9 +963,8 @@ export default function EntertainmentPage() {
               </em>
             </h2>
             <p className="mt-5 max-w-sm text-[13px] leading-5 text-[#66728f]">
-              The things buyers in entertainment ask us most. Anything else —
-              put it in a brief, a senior engineer replies within a business
-              day.
+              The things buyers in real estate ask us most. Anything else — put
+              it in a brief, a senior engineer replies within a business day.
             </p>
           </div>
           <div className="grid gap-3">

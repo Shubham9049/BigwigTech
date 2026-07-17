@@ -867,7 +867,7 @@ export default function HealthcarePage() {
             </div>
 
             <p className="max-w-2xl text-[20px] leading-[1.7] text-[#55607f] dark:text-[#b8c1da]">
-              The CODT disciplines we most often combine to build for
+              The Bigwig disciplines we most often combine to build for
               restaurants — same architecture, same engineers, no integration
               tax.
             </p>

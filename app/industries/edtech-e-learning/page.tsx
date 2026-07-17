@@ -15,158 +15,167 @@ import {
   Cloud,
   Music,
   Clapperboard,
+  HeartPulse,
+  Phone,
+  ShoppingCart,
+  Bot,
+  Landmark,
+  Building2,
+  Globe,
+  GraduationCap,
+  Pencil,
 } from "lucide-react";
 
 const technologies = [
-  "WebRTC",
-  "RTMP / HLS",
-  "FFmpeg",
+  "React",
+  "Typescript",
   "Node.js",
-  "Go",
-  "Redis",
-  "CDN (multi-region)",
-  "AWS Media",
+  "Postgres",
+  "LTI / SCORM",
+  "Video pipeline",
+  "WCAG tooling",
+  "AWS",
 ];
 
 const systems = [
   {
     id: "01",
-    title: "OTT & VOD platforms",
+    title: "LMS & course delivery",
     description:
-      "Subscription and ad-supported video products with catalogues, entitlements, DRM and recommendations.",
+      "Structured courses, lessons and cohorts with progress tracking that learners and instructors both trust.",
   },
   {
     id: "02",
-    title: "Low-latency live",
+    title: "Creator & marketplace",
     description:
-      "WebRTC and RTMP pipelines tuned for sub-second start and real-time interaction at scale.",
+      "Tools for creators to build, sell and run courses, with payments and revenue share handled.",
   },
   {
     id: "03",
-    title: "Creator & UGC video",
+    title: "Assessment & certification",
     description:
-      "Upload, transcode, moderation and monetisation systems for creator-led video at volume.",
+      "Quizzes, assignments, grading and verifiable certificates wired into the learning flow.",
   },
   {
     id: "04",
-    title: "Live event experience",
+    title: "Accessibility first",
     description:
-      "Streaming woven into registration, chat, Q&A and analytics for virtual and hybrid events.",
+      "WCAG 2.2 AA built into components from line one — keyboard, screen-reader and contrast ready.",
   },
   {
     id: "05",
-    title: "Real-time chat & interaction",
+    title: "Learning analytics",
     description:
-      "Reactions, polls and chat that stay in sync with the stream even under a viral load.",
+      "Engagement and outcome data that shows who is progressing and where a course loses people.",
   },
   {
     id: "06",
-    title: "Monetisation & rights",
+    title: "Institutional integration",
     description:
-      "Subscriptions, pay-per-view, ad insertion and content protection built into the platform.",
+      "SSO, rostering and standards (LTI / SCORM) for schools, universities and enterprises.",
   },
 ];
 
 const outcomes = [
   {
-    value: "50K+",
-    label: "Peak concurrent viewers held",
-  },
-  {
-    value: "<1.5s",
-    label: "Stream start time",
-  },
-  {
-    value: "10K+",
-    label: "Events streamed",
+    value: "WCAG 2.2 AA",
+    label: "Accessibility built in",
   },
   {
     value: "Every",
-    label: "Device & network reached",
+    label: "Learner & device included",
+  },
+  {
+    value: "Measured",
+    label: "Completion, mastery, drop-off",
+  },
+  {
+    value: "LTI/SCORM",
+    label: "Institutional standards",
   },
 ];
 
 const principles = [
   {
     id: "01",
-    title: "Engineered for the spike",
+    title: "Accessible from line one",
     description:
-      "We design for your worst-case concurrency, then load-test to it — the launch night is the spec, not the surprise.",
+      "WCAG 2.2 AA is part of the component library, not a remediation project after launch — every learner is in scope.",
   },
   {
     id: "02",
-    title: "Latency as a feature",
+    title: "Outcomes, measured",
     description:
-      "Every architecture decision is weighed against join time and glass-to-glass delay, because that is what viewers feel.",
+      "We instrument learning so you see completion, mastery and drop-off — not just logins.",
   },
   {
     id: "03",
-    title: "Every device, every network",
+    title: "Works on weak hardware",
     description:
-      "Adaptive delivery so a phone on cellular and a TV on fibre both get the best stream their connection allows.",
+      "We build for the old laptop and the slow school network, because that is where many learners actually are.",
   },
   {
     id: "04",
-    title: "Observability built in",
+    title: "Creators in control",
     description:
-      "Real-time dashboards on quality, buffering and concurrency, so you see a problem before the audience tweets it.",
+      "Where the model is creator-led, we give them tooling to build and monetise without filing a ticket.",
   },
 ];
 
 const audiences = [
-  "OTT & streaming services",
-  "Live & hybrid event platforms",
-  "Creator & UGC video products",
-  "Sports & live entertainment",
-  "Media & broadcast",
-  "Conferencing & webinar tools",
+  "K-12 & higher education",
+  "Corporate L&D",
+  "Creator-led course platforms",
+  "Bootcamps & academies",
+  "Certification & compliance training",
+  "EdTech startups",
 ];
 
 const relatedServices = [
   {
-    title: "SaaS App Development",
-    icon: Monitor,
-    href: "/saas-app-development",
+    title: "Web App Development",
+    icon: Globe,
+    href: "/web-app-development",
   },
   {
-    title: "Audio & Video Streaming Platforms",
-    icon: Music,
-    href: "/audio-video-streaming",
+    title: "Mobile App Development",
+    icon: Phone,
+    href: "/mobile-app-development",
   },
   {
-    title: "DevOps & Cloud (AWS)",
-    icon: Cloud,
-    href: "/devops-cloud",
+    title: "UI / UX Design",
+    icon: Pencil,
+    href: "/ui-ux-design",
   },
 ];
 
 const nextIndustry = {
-  number: "04",
+  number: "09",
   total: "15",
-  title: "Healthcare",
-  href: "/industries/healthcare",
+  title: "Construction ",
+  href: "/industries/construction",
 };
 
 const faqs = [
   [
-    "How many concurrent viewers can you support?",
-    "We have shipped live layers holding 50K+ concurrent viewers. We design to your peak target and load-test against it before launch.",
+    "Do you build to accessibility standards?",
+    "Yes — WCAG 2.2 AA is built into our component library from the start, so platforms are keyboard, screen-reader and contrast ready on launch, not after a remediation project.",
   ],
   [
-    "WebRTC, RTMP or HLS — which do you use?",
-    "Whichever the use case demands. Sub-second interaction leans WebRTC; large broadcast leans low-latency HLS. We pick per the latency and scale you need.",
+    "Can you support creator-led course marketplaces?",
+    "We build the tooling for creators to author, sell and run courses, including payments and revenue share.",
   ],
   [
-    "Can you handle DRM and content protection?",
-    "Yes — entitlements, token-gated playback and studio DRM are part of the OTT and VOD builds we deliver.",
+    "Do you handle assessment and certification?",
+    "Quizzes, assignments, grading and verifiable certificates are part of the learning flow we deliver.",
   ],
   [
-    "Will the stream hold up on poor connections?",
-    "Adaptive bitrate delivery means each viewer gets the best quality their network sustains, with graceful fallback rather than a frozen frame.",
+    "How do we know learners are actually learning?",
+    "We instrument learning analytics — completion, mastery and drop-off — so you can see outcomes and fix the lessons that lose people.",
   ],
   [
-    "Can you build monetisation in?",
-    "Yes — Aviatize manages 1,000+ aircraft across 40+ countries, with fleet, type and jurisdiction handled as configuration.",
+    "Can it integrate with our school or LMS standards?",
+    "Yes — SSO, rostering and LTI / SCORM standards are part of the institutional integrations we build.",
   ],
 ] as const;
 
@@ -179,7 +188,7 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
   );
 }
 
-export default function EntertainmentPage() {
+export default function EdTechPage() {
   return (
     <div className="industries-page overflow-hidden bg-[#f6f7fd] text-[#20263a]">
       <style>{`
@@ -377,14 +386,14 @@ export default function EntertainmentPage() {
         {/* Background Number */}
         <div className="pointer-events-none absolute right-[2%] top-1/2 hidden -translate-y-1/2 select-none lg:block">
           <span className="text-[26rem] font-semibold leading-none tracking-[-0.08em] text-[#ff6d50]/5">
-            03
+            08
           </span>
         </div>
 
         {/* Floating Card */}
         <div className="absolute right-10 top-14 hidden lg:block">
           <div className="flex h-44 w-44 items-center justify-center rounded-[2rem] border border-[#ffb59f] bg-gradient-to-br from-[#ffe7e0] via-white/80 to-[#ffe9e3] shadow-[0_25px_60px_rgba(255,109,80,.12)] backdrop-blur">
-            <Clapperboard
+            <GraduationCap
               size={66}
               strokeWidth={1.8}
               className="text-[#ff6d50]"
@@ -410,33 +419,34 @@ export default function EntertainmentPage() {
 
             <span className="mx-3">/</span>
 
-            <span className="text-[#ff6d50]">Entertainment</span>
+            <span className="text-[#ff6d50]">EdTech</span>
           </div>
 
           {/* Industry Badge */}
           <div className="mt-10 inline-flex items-center gap-4 rounded-full border border-[#d8dce9] bg-white/75 px-5 py-3 shadow-sm backdrop-blur">
             <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-[#ff7a5d] to-[#756bff] text-white">
-              <Clapperboard size={18} />
+              <GraduationCap size={18} />
             </span>
 
             <span className="text-[14px] uppercase tracking-[.18em] text-[#66728f]">
-              Industry 03 / 15 — Streaming & live events
+              Industry 08 / 15 — Learning platforms & LMS
             </span>
           </div>
 
           {/* Heading */}
           <h1 className="mt-12 max-w-3xl text-[clamp(3.5rem,6vw,6.2rem)] leading-[.9] tracking-[-.075em] text-[#111322]">
-            Streams that survive
+            Learning platforms
             <em className="font-serif font-normal text-[#ff6d50]">
-              going viral.
+              {" "}
+              everyone can use.
             </em>
           </h1>
 
           {/* Description */}
           <p className="mt-10 max-w-3xl text-[21px] leading-[1.7] text-[#55607f]">
-            OTT platforms, low-latency live event tech and creator video systems
-            — engineered to stay smooth when fifty thousand people hit play at
-            once.
+            LMS systems, course marketplaces and creator-led learning products —
+            built to WCAG 2.2 AA so every learner is included, with the
+            analytics to prove they’re learning.
           </p>
 
           {/* Divider */}
@@ -446,31 +456,31 @@ export default function EntertainmentPage() {
           <div className="mt-10 grid gap-8 md:grid-cols-3">
             <div>
               <h3 className="text-[56px] font-semibold leading-none tracking-[-.06em] text-[#ff6d50]">
-                &lt;2.4s
+                WCAG 2.2 AA
               </h3>
 
               <p className="mt-3 text-[12px] uppercase tracking-[.22em] text-[#6c7696]">
-                Median join time
+                Accessibility standard
               </p>
             </div>
 
             <div className="border-l border-[#d8dce9] pl-10">
               <h3 className="text-[56px] font-semibold leading-none tracking-[-.06em] text-[#ff6d50]">
-                50K+
+                Every
               </h3>
 
               <p className="mt-3 text-[12px] uppercase tracking-[.22em] text-[#6c7696]">
-                Peak concurrent viewers
+                Learner included
               </p>
             </div>
 
             <div className="border-l border-[#d8dce9] pl-10">
               <h3 className="text-[56px] font-semibold leading-none tracking-[-.06em] text-[#ff6d50]">
-                10K+
+                Built-in
               </h3>
 
               <p className="mt-3 text-[12px] uppercase tracking-[.22em] text-[#6c7696]">
-                Events streamed
+                Progress & analytics
               </p>
             </div>
           </div>
@@ -485,26 +495,26 @@ export default function EntertainmentPage() {
           <div className="grid lg:grid-cols-[1.35fr_.65fr]">
             {/* Left */}
             <div className="relative p-8 sm:p-12 lg:p-16">
-              <Quote
+              <GraduationCap
                 size={34}
                 strokeWidth={2.2}
                 className="mb-8 text-[#ff6d50]"
               />
 
               <h2 className="max-w-2xl text-[clamp(2.5rem,4.5vw,4.4rem)]  leading-[0.95] tracking-[-0.06em] text-[#111322] dark:text-white">
-                The biggest audience is
+                If a learner can’t use it,
                 <br />
-                the hardest test.
+                it doesn’t teach them.
               </h2>
 
               <p className="mt-10 max-w-2xl text-[20px] leading-[1.75] text-[#586482] dark:text-[#b8c1da]">
-                On a live platform, success and failure arrive at the same
-                moment — the spike. We architect for the worst-case concurrency
-                from the start, weigh every decision against join time and
-                glass-to-glass latency, and deliver adaptively so every device
-                gets the best stream its network allows. We built the live layer
-                inside Bizzabo to hold 50K+ concurrent viewers with sub-second
-                starts. The launch night is the specification, not the gamble.
+                We treat accessibility as the core requirement of education
+                software, not a compliance checkbox. Every platform ships to
+                WCAG 2.2 AA — keyboard navigable, screen-reader friendly,
+                high-contrast — and is tested on the modest hardware and
+                networks real learners use. Layered on top: assessment,
+                certification and learning analytics that tell you whether the
+                teaching is actually landing.
               </p>
             </div>
 
@@ -512,7 +522,7 @@ export default function EntertainmentPage() {
             <div className="flex items-center justify-center border-t border-[#d9deeb] p-10 lg:border-l lg:border-t-0 dark:border-[#31384d]">
               <div className="text-center">
                 <div className="mx-auto flex h-52 w-52 items-center justify-center rounded-full border border-[#ffb7a3] bg-gradient-to-br from-[#ffe8e1] via-white to-[#fff1ec] shadow-[0_20px_50px_rgba(255,109,80,.12)]">
-                  <Clapperboard
+                  <GraduationCap
                     size={70}
                     strokeWidth={1.8}
                     className="text-[#ff6d50]"
@@ -520,7 +530,7 @@ export default function EntertainmentPage() {
                 </div>
 
                 <p className="mt-8 text-[13px] font-medium uppercase tracking-[0.32em] text-[#66728f] dark:text-[#b8c1da]">
-                  Entertainment
+                  EdTech
                 </p>
               </div>
             </div>
@@ -548,10 +558,10 @@ export default function EntertainmentPage() {
 
             <div className="mt-4 flex flex-wrap gap-3">
               {[
-                "OTT & VOD platforms",
-                "Low-latency live",
-                "Creator & UGC video",
-                "Live event experience",
+                "Field operations & daily logs",
+                "Creator & marketplace",
+                "Assessment & certification",
+                "Accessibility first",
               ].map((item) => (
                 <span
                   key={item}
@@ -566,28 +576,26 @@ export default function EntertainmentPage() {
           {/* Right */}
           <div className="space-y-10 text-[20px] leading-[1.8] text-[#55607f] dark:text-[#b8c1da]">
             <p>
-              Streaming is unforgiving: the moment your audience is biggest is
-              the moment your infrastructure is most likely to break. Buffering
-              during the keynote, a stream that won’t start, latency that kills
-              the live chat — these are the failures viewers never forgive and
-              reviewers never forget.
+              Education software has a duty most products don’t: it has to work
+              for every learner, including those using a screen reader, a
+              keyboard, or a slow connection in a school with old hardware.
+              Accessibility here is not a nice-to-have — it is the brief.
             </p>
 
             <p>
-              We engineered the{" "}
+              We build learning platforms where{" "}
               <strong className="font-semibold text-[#111322] dark:text-white">
-                low-latency live layer inside Bizzabo’s Event Experience OS,
+                WCAG 2.2 AA is baked in,
               </strong>{" "}
-              holding 50K+ concurrent viewers with sub-second start times. We
-              build streaming that scales with the spike instead of buckling
-              under it.
+              not retrofitted, alongside the course delivery, assessment and
+              analytics that tell you whether learners are actually progressing.
             </p>
 
             <p>
-              From OTT catalogues and DRM to creator upload pipelines and
-              real-time interaction, we treat latency and concurrency as
-              features to engineer — because on a live platform they are what
-              the audience actually feels.
+              Where the model is creator-led, we hand authors the tooling to
+              build, sell and run courses themselves — and where it is
+              institutional, we wire in the SSO, rosters and reporting that
+              schools and universities depend on.
             </p>
           </div>
         </div>
@@ -606,7 +614,7 @@ export default function EntertainmentPage() {
               <h2 className="text-[clamp(3rem,5vw,5.5rem)]  leading-[.92] tracking-[-.065em] text-[#111322] dark:text-white">
                 Systems for{" "}
                 <em className="font-serif font-normal text-[#ff6d50]">
-                  entertainment.
+                  EdTech.
                 </em>
               </h2>
             </div>
@@ -957,9 +965,8 @@ export default function EntertainmentPage() {
               </em>
             </h2>
             <p className="mt-5 max-w-sm text-[13px] leading-5 text-[#66728f]">
-              The things buyers in entertainment ask us most. Anything else —
-              put it in a brief, a senior engineer replies within a business
-              day.
+              The things buyers in real estate ask us most. Anything else — put
+              it in a brief, a senior engineer replies within a business day.
             </p>
           </div>
           <div className="grid gap-3">

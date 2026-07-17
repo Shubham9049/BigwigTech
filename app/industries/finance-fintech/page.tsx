@@ -15,111 +15,116 @@ import {
   Cloud,
   Music,
   Clapperboard,
+  HeartPulse,
+  Phone,
+  ShoppingCart,
+  Bot,
+  Landmark,
 } from "lucide-react";
 
 const technologies = [
-  "WebRTC",
-  "RTMP / HLS",
-  "FFmpeg",
-  "Node.js",
-  "Go",
-  "Redis",
-  "CDN (multi-region)",
-  "AWS Media",
+  "Node.js / Go",
+  "Postgres",
+  "Tokenisation (PCI",
+  "Stripe / banking rails",
+  "KYC / AML APIs",
+  "Double-entry ledger",
+  "AWS",
+  "Audit logging",
 ];
 
 const systems = [
   {
     id: "01",
-    title: "OTT & VOD platforms",
+    title: "Payments & wallets",
     description:
-      "Subscription and ad-supported video products with catalogues, entitlements, DRM and recommendations.",
+      "Tokenised card and account flows, payouts and reconciliation that keep PCI scope minimal and books exact.",
   },
   {
     id: "02",
-    title: "Low-latency live",
+    title: "Lending & credit",
     description:
-      "WebRTC and RTMP pipelines tuned for sub-second start and real-time interaction at scale.",
+      "Origination, underwriting workflows and servicing with decisioning you can explain and audit.",
   },
   {
     id: "03",
-    title: "Creator & UGC video",
+    title: "Wealth & investing",
     description:
-      "Upload, transcode, moderation and monetisation systems for creator-led video at volume.",
+      "Portfolio, trading and reporting platforms with the data integrity the numbers demand.",
   },
   {
     id: "04",
-    title: "Live event experience",
+    title: "Ledgers & reconciliation",
     description:
-      "Streaming woven into registration, chat, Q&A and analytics for virtual and hybrid events.",
+      "Double-entry ledgers and automated reconciliation so every cent is accounted for and traceable.",
   },
   {
     id: "05",
-    title: "Real-time chat & interaction",
+    title: "KYC / AML & fraud",
     description:
-      "Reactions, polls and chat that stay in sync with the stream even under a viral load.",
+      "Identity, onboarding and monitoring integrations that satisfy compliance without crushing conversion.",
   },
   {
     id: "06",
-    title: "Monetisation & rights",
+    title: "Embedded finance & APIs",
     description:
-      "Subscriptions, pay-per-view, ad insertion and content protection built into the platform.",
+      "Banking, payments and card rails exposed as clean, secure APIs for your own products.",
   },
 ];
 
 const outcomes = [
   {
-    value: "50K+",
-    label: "Peak concurrent viewers held",
+    value: "SAQ A",
+    label: "PCI scope via tokenisation",
   },
   {
-    value: "<1.5s",
-    label: "Stream start time",
+    value: "To the cent",
+    label: "Ledger reconciliation",
   },
   {
-    value: "10K+",
-    label: "Events streamed",
+    value: "Immutable",
+    label: "Audit trail on every movement",
   },
   {
-    value: "Every",
-    label: "Device & network reached",
+    value: "KYC/AML",
+    label: "Compliant onboarding",
   },
 ];
 
 const principles = [
   {
     id: "01",
-    title: "Engineered for the spike",
+    title: "Scope kept minimal",
     description:
-      "We design for your worst-case concurrency, then load-test to it — the launch night is the spec, not the surprise.",
+      "Tokenisation keeps card data off your systems, so PCI burden stays at SAQ A instead of a full annual audit.",
   },
   {
     id: "02",
-    title: "Latency as a feature",
+    title: "Correct, then fast",
     description:
-      "Every architecture decision is weighed against join time and glass-to-glass delay, because that is what viewers feel.",
+      "Ledgers reconcile and balances are provable — in money software, correctness is non-negotiable before speed.",
   },
   {
     id: "03",
-    title: "Every device, every network",
+    title: "Auditable by design",
     description:
-      "Adaptive delivery so a phone on cellular and a TV on fibre both get the best stream their connection allows.",
+      "Every movement of value leaves an immutable trail, so a compliance review is a query rather than a forensic dig.",
   },
   {
     id: "04",
-    title: "Observability built in",
+    title: "Regulation in the room",
     description:
-      "Real-time dashboards on quality, buffering and concurrency, so you see a problem before the audience tweets it.",
+      "We design around the PCI, KYC and AML obligations that bind you before we write the first endpoint.",
   },
 ];
 
 const audiences = [
-  "OTT & streaming services",
-  "Live & hybrid event platforms",
-  "Creator & UGC video products",
-  "Sports & live entertainment",
-  "Media & broadcast",
-  "Conferencing & webinar tools",
+  "Payments & wallet providers",
+  "Lending & credit platforms",
+  "Wealth & investing apps",
+  "Neobanks & embedded finance",
+  "Insurtech & B2B finance",
+  "Crypto & digital assets",
 ];
 
 const relatedServices = [
@@ -129,44 +134,44 @@ const relatedServices = [
     href: "/saas-app-development",
   },
   {
-    title: "Audio & Video Streaming Platforms",
-    icon: Music,
-    href: "/audio-video-streaming",
+    title: "Mobile App Development",
+    icon: Phone,
+    href: "/mobile-app-development",
   },
   {
-    title: "DevOps & Cloud (AWS)",
-    icon: Cloud,
-    href: "/devops-cloud",
+    title: "AI / ML Solutions",
+    icon: Bot,
+    href: "/ai-ml-solutions",
   },
 ];
 
 const nextIndustry = {
-  number: "04",
+  number: "07",
   total: "15",
-  title: "Healthcare",
-  href: "/industries/healthcare",
+  title: "Real Estate ",
+  href: "/industries/real-estate",
 };
 
 const faqs = [
   [
-    "How many concurrent viewers can you support?",
-    "We have shipped live layers holding 50K+ concurrent viewers. We design to your peak target and load-test against it before launch.",
+    "How do you keep PCI scope manageable?",
+    "By tokenising card data through compliant providers so raw card numbers never touch your systems — keeping you at SAQ A rather than a full PCI audit.",
   ],
   [
-    "WebRTC, RTMP or HLS — which do you use?",
-    "Whichever the use case demands. Sub-second interaction leans WebRTC; large broadcast leans low-latency HLS. We pick per the latency and scale you need.",
+    "Can you build lending or underwriting logic?",
+    "Yes — origination, decisioning and servicing with explainable, auditable rules, integrated with the data and identity checks you rely on.",
   ],
   [
-    "Can you handle DRM and content protection?",
-    "Yes — entitlements, token-gated playback and studio DRM are part of the OTT and VOD builds we deliver.",
+    "Do you handle KYC and AML?",
+    "We integrate identity, onboarding and transaction-monitoring providers so compliance obligations are met without wrecking the signup funnel.",
   ],
   [
-    "Will the stream hold up on poor connections?",
-    "Adaptive bitrate delivery means each viewer gets the best quality their network sustains, with graceful fallback rather than a frozen frame.",
+    "How do you guarantee the books are right?",
+    "Double-entry ledgers and automated reconciliation, with an immutable audit trail on every movement of value — correctness is the first requirement, not a later one.",
   ],
   [
-    "Can you build monetisation in?",
-    "Yes — Aviatize manages 1,000+ aircraft across 40+ countries, with fleet, type and jurisdiction handled as configuration.",
+    "Can you expose our finance features as APIs?",
+    "Yes — we build embedded-finance and payments APIs that are clean, secure and documented for your own products to build on.",
   ],
 ] as const;
 
@@ -179,7 +184,7 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
   );
 }
 
-export default function EntertainmentPage() {
+export default function ECommercePage() {
   return (
     <div className="industries-page overflow-hidden bg-[#f6f7fd] text-[#20263a]">
       <style>{`
@@ -377,18 +382,14 @@ export default function EntertainmentPage() {
         {/* Background Number */}
         <div className="pointer-events-none absolute right-[2%] top-1/2 hidden -translate-y-1/2 select-none lg:block">
           <span className="text-[26rem] font-semibold leading-none tracking-[-0.08em] text-[#ff6d50]/5">
-            03
+            06
           </span>
         </div>
 
         {/* Floating Card */}
         <div className="absolute right-10 top-14 hidden lg:block">
           <div className="flex h-44 w-44 items-center justify-center rounded-[2rem] border border-[#ffb59f] bg-gradient-to-br from-[#ffe7e0] via-white/80 to-[#ffe9e3] shadow-[0_25px_60px_rgba(255,109,80,.12)] backdrop-blur">
-            <Clapperboard
-              size={66}
-              strokeWidth={1.8}
-              className="text-[#ff6d50]"
-            />
+            <Landmark size={66} strokeWidth={1.8} className="text-[#ff6d50]" />
           </div>
         </div>
 
@@ -410,33 +411,34 @@ export default function EntertainmentPage() {
 
             <span className="mx-3">/</span>
 
-            <span className="text-[#ff6d50]">Entertainment</span>
+            <span className="text-[#ff6d50]">Fintech</span>
           </div>
 
           {/* Industry Badge */}
           <div className="mt-10 inline-flex items-center gap-4 rounded-full border border-[#d8dce9] bg-white/75 px-5 py-3 shadow-sm backdrop-blur">
             <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-[#ff7a5d] to-[#756bff] text-white">
-              <Clapperboard size={18} />
+              <Landmark size={18} />
             </span>
 
             <span className="text-[14px] uppercase tracking-[.18em] text-[#66728f]">
-              Industry 03 / 15 — Streaming & live events
+              Industry 06 / 15 — Regulated financial systems
             </span>
           </div>
 
           {/* Heading */}
           <h1 className="mt-12 max-w-3xl text-[clamp(3.5rem,6vw,6.2rem)] leading-[.9] tracking-[-.075em] text-[#111322]">
-            Streams that survive
+            Fintech built on
             <em className="font-serif font-normal text-[#ff6d50]">
-              going viral.
+              {" "}
+              trust and rails.
             </em>
           </h1>
 
           {/* Description */}
           <p className="mt-10 max-w-3xl text-[21px] leading-[1.7] text-[#55607f]">
-            OTT platforms, low-latency live event tech and creator video systems
-            — engineered to stay smooth when fifty thousand people hit play at
-            once.
+            Lending, payments and wealth platforms engineered for the rules they
+            live under — tokenised, auditable and reconciled, so the regulator
+            and the customer both stay confident.
           </p>
 
           {/* Divider */}
@@ -446,31 +448,31 @@ export default function EntertainmentPage() {
           <div className="mt-10 grid gap-8 md:grid-cols-3">
             <div>
               <h3 className="text-[56px] font-semibold leading-none tracking-[-.06em] text-[#ff6d50]">
-                &lt;2.4s
+                SAQ A
               </h3>
 
               <p className="mt-3 text-[12px] uppercase tracking-[.22em] text-[#6c7696]">
-                Median join time
+                Minimal PCI scope
               </p>
             </div>
 
             <div className="border-l border-[#d8dce9] pl-10">
               <h3 className="text-[56px] font-semibold leading-none tracking-[-.06em] text-[#ff6d50]">
-                50K+
+                Tokenised
               </h3>
 
               <p className="mt-3 text-[12px] uppercase tracking-[.22em] text-[#6c7696]">
-                Peak concurrent viewers
+                Cards never touch you
               </p>
             </div>
 
             <div className="border-l border-[#d8dce9] pl-10">
               <h3 className="text-[56px] font-semibold leading-none tracking-[-.06em] text-[#ff6d50]">
-                10K+
+                Audit
               </h3>
 
               <p className="mt-3 text-[12px] uppercase tracking-[.22em] text-[#6c7696]">
-                Events streamed
+                Trail by default
               </p>
             </div>
           </div>
@@ -492,19 +494,19 @@ export default function EntertainmentPage() {
               />
 
               <h2 className="max-w-2xl text-[clamp(2.5rem,4.5vw,4.4rem)]  leading-[0.95] tracking-[-0.06em] text-[#111322] dark:text-white">
-                The biggest audience is
+                In finance, the audit
                 <br />
-                the hardest test.
+                trail is the product.
               </h2>
 
               <p className="mt-10 max-w-2xl text-[20px] leading-[1.75] text-[#586482] dark:text-[#b8c1da]">
-                On a live platform, success and failure arrive at the same
-                moment — the spike. We architect for the worst-case concurrency
-                from the start, weigh every decision against join time and
-                glass-to-glass latency, and deliver adaptively so every device
-                gets the best stream its network allows. We built the live layer
-                inside Bizzabo to hold 50K+ concurrent viewers with sub-second
-                starts. The launch night is the specification, not the gamble.
+                We build money systems the way regulators wish everyone did:
+                card data tokenised so it never lands in your scope,
+                double-entry ledgers that reconcile to the cent, and an
+                immutable record of every transaction. PCI, KYC and AML
+                obligations shape the architecture from day one. The payoff is a
+                platform that passes review quietly and a customer base that
+                never has to wonder where their money went.
               </p>
             </div>
 
@@ -512,7 +514,7 @@ export default function EntertainmentPage() {
             <div className="flex items-center justify-center border-t border-[#d9deeb] p-10 lg:border-l lg:border-t-0 dark:border-[#31384d]">
               <div className="text-center">
                 <div className="mx-auto flex h-52 w-52 items-center justify-center rounded-full border border-[#ffb7a3] bg-gradient-to-br from-[#ffe8e1] via-white to-[#fff1ec] shadow-[0_20px_50px_rgba(255,109,80,.12)]">
-                  <Clapperboard
+                  <Landmark
                     size={70}
                     strokeWidth={1.8}
                     className="text-[#ff6d50]"
@@ -520,7 +522,7 @@ export default function EntertainmentPage() {
                 </div>
 
                 <p className="mt-8 text-[13px] font-medium uppercase tracking-[0.32em] text-[#66728f] dark:text-[#b8c1da]">
-                  Entertainment
+                  Fintech
                 </p>
               </div>
             </div>
@@ -548,10 +550,10 @@ export default function EntertainmentPage() {
 
             <div className="mt-4 flex flex-wrap gap-3">
               {[
-                "OTT & VOD platforms",
-                "Low-latency live",
-                "Creator & UGC video",
-                "Live event experience",
+                "Payments & wallets",
+                "Lending & credit",
+                "Wealth & investing",
+                "Ledgers & reconciliation",
               ].map((item) => (
                 <span
                   key={item}
@@ -566,28 +568,26 @@ export default function EntertainmentPage() {
           {/* Right */}
           <div className="space-y-10 text-[20px] leading-[1.8] text-[#55607f] dark:text-[#b8c1da]">
             <p>
-              Streaming is unforgiving: the moment your audience is biggest is
-              the moment your infrastructure is most likely to break. Buffering
-              during the keynote, a stream that won’t start, latency that kills
-              the live chat — these are the failures viewers never forgive and
-              reviewers never forget.
+              Money software has no margin for "mostly works". A reconciliation
+              that drifts, a card number stored where it shouldn’t be, a ledger
+              that can’t be audited — in finance these are not bugs, they are
+              liabilities with regulators attached.
             </p>
 
             <p>
-              We engineered the{" "}
+              We build regulated financial systems where{" "}
               <strong className="font-semibold text-[#111322] dark:text-white">
-                low-latency live layer inside Bizzabo’s Event Experience OS,
+                compliance and correctness are the architecture:
               </strong>{" "}
-              holding 50K+ concurrent viewers with sub-second start times. We
-              build streaming that scales with the spike instead of buckling
-              under it.
+              card data tokenised so PCI scope stays at SAQ A, double-entry
+              ledgers that reconcile to the cent, and an audit trail on every
+              movement of value.
             </p>
 
             <p>
-              From OTT catalogues and DRM to creator upload pipelines and
-              real-time interaction, we treat latency and concurrency as
-              features to engineer — because on a live platform they are what
-              the audience actually feels.
+              The obligations that bind you — PCI, KYC, AML — shape the design
+              from the first endpoint, so the platform passes review quietly and
+              the customer never has to wonder where their money went.
             </p>
           </div>
         </div>
@@ -606,7 +606,7 @@ export default function EntertainmentPage() {
               <h2 className="text-[clamp(3rem,5vw,5.5rem)]  leading-[.92] tracking-[-.065em] text-[#111322] dark:text-white">
                 Systems for{" "}
                 <em className="font-serif font-normal text-[#ff6d50]">
-                  entertainment.
+                  Fintech.
                 </em>
               </h2>
             </div>
@@ -957,9 +957,8 @@ export default function EntertainmentPage() {
               </em>
             </h2>
             <p className="mt-5 max-w-sm text-[13px] leading-5 text-[#66728f]">
-              The things buyers in entertainment ask us most. Anything else —
-              put it in a brief, a senior engineer replies within a business
-              day.
+              The things buyers in healthcare ask us most. Anything else — put
+              it in a brief, a senior engineer replies within a business day.
             </p>
           </div>
           <div className="grid gap-3">

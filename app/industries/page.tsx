@@ -746,16 +746,16 @@ export default function IndustriesPage() {
                   <th>What matters</th>
                   <th>Typical agency</th>
                   <th className="bg-[#fff0ed] text-[#e46047]">
-                    CODT Technologies
+                    Bigwig Technologies
                   </th>
                 </tr>
               </thead>
               <tbody>
-                {comparison.map(([label, agency, codt]) => (
+                {comparison.map(([label, agency, Bigwig]) => (
                   <tr key={label} className="border-t border-[#edf0f5]">
                     <th className="font-semibold">{label}</th>
                     <td className="text-[#66728f]">{agency}</td>
-                    <td className="bg-[#fff8f5] text-[#66728f]">{codt}</td>
+                    <td className="bg-[#fff8f5] text-[#66728f]">{Bigwig}</td>
                   </tr>
                 ))}
               </tbody>
