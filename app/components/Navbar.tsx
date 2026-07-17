@@ -14,7 +14,6 @@ const navigationItems = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/services" },
   { name: "Industries", href: "/industries" },
-  { name: "Portfolio", href: "/portfolio" },
   { name: "Insights", href: "/insights" },
   { name: "About Us", href: "/about-us" },
   { name: "Contact", href: "/contact" },
