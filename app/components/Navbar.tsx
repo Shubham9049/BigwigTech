@@ -21,20 +21,18 @@ const navigationItems = [
 
 declare global {
   interface Window {
-    googleTranslateElementInit: () => void;
-    google: {
+    googleTranslateElementInit?: () => void;
+    google?: {
       translate: {
         TranslateElement: new (
-          options: {
-            pageLanguage: string;
-            autoDisplay?: boolean;
-          },
+          options: { pageLanguage: string; autoDisplay?: boolean },
           elementId: string,
         ) => void;
       };
     };
   }
 }
+
 export default function Navbar() {
   const headerRef = useRef<HTMLElement>(null);
   const [sticky, setSticky] = useState(false);
@@ -43,32 +41,41 @@ export default function Navbar() {
   const { resolvedTheme, setTheme } = useTheme();
 
   useEffect(() => {
-    const googleTranslateElementInit = () => {
-      new window.google.translate.TranslateElement(
-        {
-          pageLanguage: "en",
-          autoDisplay: false,
-        },
-        "google_translate_element",
-      );
+    // Google Translate replaces text nodes while React still owns them. React
+    // may later try to remove one of those already-replaced nodes; treat that
+    // specific cleanup as complete instead of allowing a NotFoundError.
+    const nativeRemoveChild = Node.prototype.removeChild;
+    Node.prototype.removeChild = function <T extends Node>(child: T): T {
+      if (child.parentNode !== this) return child;
+      return nativeRemoveChild.call(this, child) as T;
     };
 
-    const loadGoogleTranslateScript = () => {
-      if (!window.googleTranslateElementInit) {
-        const script = document.createElement("script");
-
-        script.src =
-          "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-
-        script.async = true;
-
-        document.body.appendChild(script);
-
-        window.googleTranslateElementInit = googleTranslateElementInit;
+    window.googleTranslateElementInit = () => {
+      if (window.google && !document.querySelector(".goog-te-combo")) {
+        new window.google.translate.TranslateElement(
+          { pageLanguage: "en", autoDisplay: false },
+          "google_translate_element",
+        );
       }
     };
 
-    loadGoogleTranslateScript();
+    const existingScript = document.querySelector<HTMLScriptElement>(
+      'script[data-google-translate="true"]',
+    );
+    if (!existingScript) {
+      const script = document.createElement("script");
+      script.src =
+        "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      script.async = true;
+      script.dataset.googleTranslate = "true";
+      document.body.appendChild(script);
+    } else if (window.google) {
+      window.googleTranslateElementInit();
+    }
+
+    return () => {
+      Node.prototype.removeChild = nativeRemoveChild;
+    };
   }, []);
 
   useEffect(() => {
@@ -125,6 +132,11 @@ export default function Navbar() {
           : "top-2 bg-transparent min-[1280px]:w-[88%]"
       }`}
     >
+      <div
+        id="google_translate_element"
+        className="pointer-events-none fixed -left-full top-0 h-px w-px overflow-hidden opacity-0"
+        aria-hidden="true"
+      />
       <div className="flex h-[72px] items-center justify-between gap-4 px-4 sm:px-6 xl:px-8">
         {/* Logo */}
 
