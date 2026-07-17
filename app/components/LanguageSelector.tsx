@@ -100,7 +100,11 @@ export default function LanguageSelector({
   const buttonSize = variant === "footer" ? "h-10 px-4" : "h-12 px-4";
 
   return (
-    <div ref={wrapperRef} className={`relative ${className}`}>
+    <div
+      ref={wrapperRef}
+      translate="no"
+      className={`notranslate relative ${className}`}
+    >
       <button
         type="button"
         onClick={() => setOpen((isOpen) => !isOpen)}
