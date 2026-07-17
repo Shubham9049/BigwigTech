@@ -118,6 +118,7 @@ export default function Navbar() {
   return (
     <motion.header
       ref={headerRef}
+      onMouseLeave={() => setActiveMenu(null)}
       initial={false}
       animate={{
         y: sticky ? 8 : 0,

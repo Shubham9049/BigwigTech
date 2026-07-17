@@ -122,7 +122,7 @@ export default function ServicesMegaMenu({
       exit={{ opacity: 0, y: 15 }}
       transition={{ duration: 0.25 }}
       id="services-mega-menu"
-      className="absolute left-1/2 top-full z-50 mt-4 max-h-[calc(100dvh-7.5rem)] w-[min(94vw,1800px)] -translate-x-1/2 overflow-y-auto overscroll-contain rounded-[28px] border border-[#dfe3ee] bg-[#f9faff] px-6 py-8 shadow-[0_28px_64px_rgba(38,48,86,.14)] lg:px-10 lg:py-12"
+      className="absolute left-1/2 top-full z-50 max-h-[calc(100dvh-7.5rem)] w-[min(94vw,1800px)] -translate-x-1/2 overflow-y-auto overscroll-contain rounded-[28px] border border-[#dfe3ee] bg-[#f9faff] px-6 py-4 shadow-[0_28px_64px_rgba(38,48,86,.14)] lg:px-10 lg:py-12"
     >
       <div className="mb-9 flex items-center justify-between">
         <h3 className="text-sm font-semibold uppercase tracking-[6px] text-[#66708d]">
