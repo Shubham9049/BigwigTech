@@ -88,7 +88,7 @@ export default function Footer() {
           <div>
             <p className="footer-label">Company</p>
             <div className="mt-4 space-y-2 text-sm tracking-[-.025em] text-[#51608c]">
-              <a className="footer-link" href="#">
+              <a className="footer-link" href="/about-us">
                 About Us
               </a>
               <a className="footer-link" href="#">
