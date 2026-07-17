@@ -487,6 +487,62 @@ body {
 .dark .contact-page [class*="bg-[#fff0ed]"] {
   background: #3a2a35 !important;
 }
+
+/* Insight and About pages use bespoke colour tokens, so keep their dark theme
+   scoped to the page rather than relying on the shared utility fallbacks. */
+.dark .insights-page,
+.dark .about-us-page {
+  background: #101422 !important;
+  color: #f4f6ff !important;
+}
+.dark .insights-page section,
+.dark .about-us-page section {
+  border-color: #30384f !important;
+}
+.dark .insights-page [class*="text-[#"],
+.dark .about-us-page [class*="text-[#"] {
+  color: #b8c1da !important;
+}
+.dark .insights-page [class*="text-[#ff"],
+.dark .about-us-page [class*="text-[#ff"] {
+  color: #ff927d !important;
+}
+.dark .insights-page h1,
+.dark .insights-page h2,
+.dark .insights-page h3,
+.dark .about-us-page h1,
+.dark .about-us-page h2,
+.dark .about-us-page h3 {
+  color: #f8f9ff !important;
+}
+.dark .insights-page [class*="border-[#"],
+.dark .about-us-page [class*="border-[#"] {
+  border-color: #30384f !important;
+}
+.dark .insights-page [class*="bg-white"],
+.dark .insights-page [class*="bg-[#f8f9fe]"],
+.dark .about-us-page [class*="bg-white"],
+.dark .about-us-page [class*="bg-[#f7f8fd]"],
+.dark .about-us-page [class*="bg-[#eef1f9]"] {
+  background-color: #191e30 !important;
+}
+.dark .insights-page > section:first-child {
+  background: linear-gradient(110deg, #211b2b 0%, #101422 50%, #171d35 100%) !important;
+}
+.dark .insights-page > section:nth-of-type(3),
+.dark .about-us-page > section:nth-of-type(3),
+.dark .about-us-page > section:nth-of-type(5) {
+  background: #151a2b !important;
+}
+.dark .about-us-page > section:first-child > .absolute {
+  background: radial-gradient(ellipse at 82% 0%, rgba(72, 84, 142, .45), transparent 68%) !important;
+}
+.dark .about-us-page [class*="bg-[#fffaf8]"] {
+  background-color: #3a2a35 !important;
+}
+.dark .about-us-page > section:last-child {
+  background: #202940 !important;
+}
 @keyframes trusted-slide {
   from {
     transform: translateX(0);

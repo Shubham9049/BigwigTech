@@ -45,7 +45,7 @@ const team = [
 
 export default function InsightsPage() {
   return (
-    <div className="bg-[#f5f6fd] text-[#171a2d]">
+    <div className="insights-page bg-[#f5f6fd] text-[#171a2d]">
       <section className="border-b border-[#dfe3f0] bg-[linear-gradient(110deg,#fff7f5_0%,#f5f6fd_50%,#e9edff_100%)] px-5 pb-14 pt-12 sm:px-8 lg:px-12 lg:pb-20">
         <div className="mx-auto max-w-[1320px]">
           <nav

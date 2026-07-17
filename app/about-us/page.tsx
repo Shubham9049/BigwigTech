@@ -22,7 +22,7 @@ const principles = [
 
 export default function AboutUsPage() {
   return (
-    <div className="overflow-hidden bg-[#f4f5fc] text-[#171a2d]">
+    <div className="about-us-page overflow-hidden bg-[#f4f5fc] text-[#171a2d]">
       <section className="relative border-b border-[#dfe3f0] px-5 pb-16 pt-12 sm:px-8 lg:px-12 lg:pb-24 lg:pt-16">
         <div className="absolute inset-x-0 bottom-0 h-64 bg-[radial-gradient(ellipse_at_82%_0%,rgba(218,224,255,.9),transparent_68%)]" />
         <div className="relative mx-auto max-w-[1320px]">
