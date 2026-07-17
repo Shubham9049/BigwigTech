@@ -88,8 +88,8 @@ export default function AboutUsPage() {
               </div>
             </div>
             <div className="p-6">
-              <h3 className="text-xl font-semibold tracking-[-.03em]">Founder</h3>
-              <p className="mt-1 text-base font-medium text-[#ff6948]">Bigwig Technologies</p>
+              <h3 className="text-xl font-semibold tracking-[-.03em]">Vipul Dutta</h3>
+              <p className="mt-1 text-base font-medium text-[#ff6948]">Founder, Bigwig Technologies</p>
             </div>
           </div>
         </div>

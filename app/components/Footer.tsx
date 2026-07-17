@@ -158,7 +158,11 @@ function FooterColumn({ title, links }: { title: string; links: string[] }) {
       <p className="footer-label">{title}</p>
       <div className="mt-4 space-y-2 text-sm tracking-[-.025em] text-[#51608c]">
         {links.map((link) => (
-          <a className="footer-link block" href="#" key={link}>
+          <a
+            className="footer-link block"
+            href={link === "Insights" ? "/insights" : "#"}
+            key={link}
+          >
             {link}
           </a>
         ))}
