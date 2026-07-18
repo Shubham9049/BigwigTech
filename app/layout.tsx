@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import ThemeProvider from "./components/ThemeProvider";
 import BackToTop from "./components/BackToTop";
 import CookiePreferences from "./components/CookiePreferences";
+import FloatingContact from "./components/FloatingContact";
 
 export const metadata: Metadata = {
   title: "Bigwig technology — Your end-to-end AI Partner",
@@ -18,8 +19,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased" suppressHydrationWarning>
-      <body className="min-h-full flex flex-col">
+    <html
+      lang="en"
+      className="min-h-[100dvh] antialiased"
+      suppressHydrationWarning
+    >
+      <body className="min-h-[100dvh] flex flex-col">
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
@@ -28,11 +33,12 @@ export default function RootLayout({
         >
           <Navbar />
 
-          <main className="flex-1 pt-24">{children}</main>
+          <main className="min-h-0 flex-1 pt-24">{children}</main>
 
           <Footer />
           <BackToTop />
           <CookiePreferences />
+          <FloatingContact />
         </ThemeProvider>
       </body>
     </html>

@@ -1,4 +1,4 @@
-import { ArrowRight, Mail, MapPin, Phone, X } from "lucide-react";
+import { ArrowRight, Mail, MapPin, Phone } from "lucide-react";
 import type { ReactNode } from "react";
 import {
   FaLinkedinIn,
@@ -13,7 +13,7 @@ const explore = ["Services", "Industries", "Portfolio", "Insights"];
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[#cfd4e3] bg-[#eef0fb] px-5 pt-8 text-[#111426] sm:px-6 md:px-10 lg:pt-10">
+    <footer className="h-auto min-h-0 shrink-0 border-t border-[#cfd4e3] bg-[#eef0fb] px-5 pb-[calc(4.75rem+env(safe-area-inset-bottom))] pt-8 text-[#111426] sm:px-6 md:px-10 md:pb-0 lg:pt-10">
       <div className="mx-auto max-w-[1725px]">
         <div className="grid gap-8 pb-8 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-10 lg:grid-cols-[1.35fr_.86fr_.95fr_1fr] lg:gap-x-12 lg:pb-10">
           <div>

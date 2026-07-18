@@ -43,7 +43,7 @@ export default function BackToTop() {
       onClick={scrollToTop}
       aria-label="Back to top"
       tabIndex={isVisible ? 0 : -1}
-      className={`fixed bottom-5 left-5 z-40 grid h-12 w-12 place-items-center rounded-full border border-slate-200 bg-white text-[#0d0f21] shadow-[0_10px_25px_-10px_rgba(15,15,40,0.25)] transition-all duration-300 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff6948] sm:bottom-8 sm:left-8 ${
+      className={`fixed bottom-[5.5rem] left-5 z-40 grid h-12 w-12 place-items-center rounded-full border border-slate-200 bg-white text-[#0d0f21] shadow-[0_10px_25px_-10px_rgba(15,15,40,0.25)] transition-all duration-300 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff6948] md:bottom-8 md:left-8 ${
         isVisible
           ? "translate-y-0 opacity-100"
           : "pointer-events-none translate-y-3 opacity-0"
