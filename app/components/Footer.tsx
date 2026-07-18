@@ -59,7 +59,7 @@ export default function Footer() {
                 By subscribing, you consent to receiving our newsletter.
                 <br />
                 Unsubscribe any time — read our{" "}
-                <a className="underline" href="#">
+                <a className="underline" href="/privacy-policy">
                   Privacy Policy
                 </a>
                 .
@@ -129,16 +129,16 @@ export default function Footer() {
             © 2026 Bigwig Technologies Pvt. Ltd. All rights reserved.
           </p>
           <div className="grid grid-cols-2 items-center gap-x-4 gap-y-2 font-medium sm:flex sm:flex-wrap sm:gap-x-6">
-            <a className="footer-link" href="#">
+            <a className="footer-link" href="/privacy-policy">
               Privacy Policy
             </a>
-            <a className="footer-link" href="#">
+            <a className="footer-link" href="/terms-of-service">
               Terms of Service
             </a>
-            <a className="footer-link" href="#">
+            <a className="footer-link" href="/cookie-policy">
               Cookie Policy
             </a>
-            <a className="footer-link" href="#">
+            <a className="footer-link" href="#cookie-preferences">
               Cookie preferences
             </a>
             <LanguageSelector

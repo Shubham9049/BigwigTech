@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ThemeProvider from "./components/ThemeProvider";
 import BackToTop from "./components/BackToTop";
+import CookiePreferences from "./components/CookiePreferences";
 
 export const metadata: Metadata = {
   title: "CODT — Your end-to-end AI Partner",
@@ -31,6 +32,7 @@ export default function RootLayout({
 
           <Footer />
           <BackToTop />
+          <CookiePreferences />
         </ThemeProvider>
       </body>
     </html>

@@ -78,17 +78,6 @@ body {
   font-family: Arial, sans-serif;
   animation: blink 0.8s steps(2, start) infinite;
 }
-.language-picker select {
-  appearance: none;
-  border: 0;
-  outline: 0;
-  background: transparent;
-  font: inherit;
-  cursor: pointer;
-}
-.language-picker svg:last-child {
-  pointer-events: none;
-}
 .dark .site-shell,
 .dark main {
   background: #101422 !important;
@@ -98,43 +87,54 @@ body {
   background-color: #191e30 !important;
   border-color: #30384f !important;
 }
-.dark main .bg-white,
-.dark main [class*="bg-[#f3f5ff]"],
-.dark main [class*="bg-[#f5f6ff]"],
-.dark main [class*="bg-[#f1f2fc]"],
-.dark main [class*="bg-[#eef0ff]"],
-.dark main [class*="bg-[#edf0f7]"],
-.dark main [class*="bg-[#fffaf8]"],
-.dark main .bg-\[\#f4f6ff\],
-.dark main .bg-\[\#f5f7ff\] {
+.dark
+  main
+  :is(
+    .bg-white,
+    [class*="bg-[#f3f5ff]"],
+    [class*="bg-[#f5f6ff]"],
+    [class*="bg-[#f1f2fc]"],
+    [class*="bg-[#eef0ff]"],
+    [class*="bg-[#edf0f7]"],
+    [class*="bg-[#fffaf8]"],
+    .bg-\[\#f4f6ff\]
+  ) {
   background-color: #191e30 !important;
 }
 .dark main [class*="bg-[linear-gradient(120deg"] {
   background: linear-gradient(120deg, #181c30, #211d38) !important;
 }
-.dark main [class*="text-[#111426]"],
-.dark main [class*="text-[#090c20]"],
-.dark main [class*="text-[#15192b]"],
-.dark main [class*="text-[#171a2a]"],
-.dark main [class*="text-[#191d2d]"],
-.dark main [class*="text-[#1f2438]"],
-.dark main [class*="text-[#22283c]"],
-.dark main [class*="text-[#24283b]"] {
+.dark
+  main
+  :is(
+    [class*="text-[#111426]"],
+    [class*="text-[#090c20]"],
+    [class*="text-[#15192b]"],
+    [class*="text-[#171a2a]"],
+    [class*="text-[#191d2d]"],
+    [class*="text-[#1f2438]"],
+    [class*="text-[#22283c]"],
+    [class*="text-[#24283b]"]
+  ) {
   color: #f4f6ff !important;
 }
-.dark main [class*="text-[#536087]"],
-.dark main [class*="text-[#56628a]"],
-.dark main [class*="text-[#5c678d]"],
-.dark main [class*="text-[#5d6683]"],
-.dark main [class*="text-[#5f6987]"],
-.dark main [class*="text-[#657196]"],
-.dark main [class*="text-[#7a84a4]"],
-.dark main [class*="text-[#8088a5]"] {
+.dark
+  main
+  :is(
+    [class*="text-[#536087]"],
+    [class*="text-[#56628a]"],
+    [class*="text-[#5c678d]"],
+    [class*="text-[#5d6683]"],
+    [class*="text-[#5f6987]"],
+    [class*="text-[#657196]"],
+    [class*="text-[#7a84a4]"],
+    [class*="text-[#8088a5]"]
+  ) {
   color: #b8c1da !important;
 }
-.dark main [class*="border-[#c"],
-.dark main [class*="border-[#d"],
-.dark main [class*="border-slate"] {
+.dark
+  main
+  :is([class*="border-[#c"], [class*="border-[#d"], [class*="border-slate"]) {
   border-color: #30384f !important;
 }
 .dark main .text-slate-500,
@@ -152,14 +152,10 @@ body {
 .dark footer {
   border-color: #30384f !important;
 }
-.dark .language-picker,
 .dark .theme-toggle {
   border-color: #4b5572;
   color: #f2f4ff;
   background: #1c2336;
-}
-.dark .language-picker select {
-  color: #f2f4ff;
 }
 .dark .language-selector {
   border-color: #4b5572;
@@ -527,7 +523,12 @@ body {
   background-color: #191e30 !important;
 }
 .dark .insights-page > section:first-child {
-  background: linear-gradient(110deg, #211b2b 0%, #101422 50%, #171d35 100%) !important;
+  background: linear-gradient(
+    110deg,
+    #211b2b 0%,
+    #101422 50%,
+    #171d35 100%
+  ) !important;
 }
 .dark .insights-page > section:nth-of-type(3),
 .dark .about-us-page > section:nth-of-type(3),
@@ -535,7 +536,11 @@ body {
   background: #151a2b !important;
 }
 .dark .about-us-page > section:first-child > .absolute {
-  background: radial-gradient(ellipse at 82% 0%, rgba(72, 84, 142, .45), transparent 68%) !important;
+  background: radial-gradient(
+    ellipse at 82% 0%,
+    rgba(72, 84, 142, 0.45),
+    transparent 68%
+  ) !important;
 }
 .dark .about-us-page [class*="bg-[#fffaf8]"] {
   background-color: #3a2a35 !important;
@@ -598,4 +603,88 @@ iframe.goog-te-menu-frame {
   -moz-appearance: none;
   appearance: none;
   background-image: none !important;
+}
+
+.privacy-copy {
+  color: #5e6b8d;
+  font-size: 0.975rem;
+  line-height: 1.75;
+}
+
+.privacy-copy h2 {
+  margin-top: 2.15rem;
+  color: #171a2d;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.privacy-copy h3 {
+  margin-top: 1.35rem;
+  color: #252b42;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.privacy-copy p + p,
+.privacy-copy h2 + p,
+.privacy-copy h3 + ul {
+  margin-top: 0.7rem;
+}
+
+.privacy-copy ul {
+  margin-top: 0.7rem;
+  display: grid;
+  gap: 0.35rem;
+  padding-left: 1.1rem;
+}
+
+.privacy-copy li::marker {
+  color: #ff6948;
+}
+
+.privacy-copy a {
+  color: #ed6548;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.dark .privacy-policy-page,
+.dark .privacy-policy-page > section,
+.dark .terms-of-service-page,
+.dark .terms-of-service-page > section,
+.dark .cookie-policy-page,
+.dark .cookie-policy-page > section {
+  background: #101422 !important;
+}
+
+.dark .privacy-policy-page > section,
+.dark .terms-of-service-page > section,
+.dark .cookie-policy-page > section {
+  border-color: #30384f !important;
+}
+
+.dark .privacy-policy-page article,
+.dark .terms-of-service-page article,
+.dark .cookie-policy-page article {
+  border-color: #30384f !important;
+  background: #191e30 !important;
+}
+
+.dark .privacy-policy-page [class*="text-[#"],
+.dark .terms-of-service-page [class*="text-[#"],
+.dark .cookie-policy-page [class*="text-[#"] {
+  color: #b8c1da !important;
+}
+
+.dark .privacy-policy-page h1,
+.dark .terms-of-service-page h1,
+.dark .cookie-policy-page h1,
+.dark .privacy-policy-page .privacy-copy h2,
+.dark .privacy-policy-page .privacy-copy h3,
+.dark .terms-of-service-page .privacy-copy h2,
+.dark .terms-of-service-page .privacy-copy h3,
+.dark .cookie-policy-page .privacy-copy h2,
+.dark .cookie-policy-page .privacy-copy h3 {
+  color: #f8f9ff !important;
 }

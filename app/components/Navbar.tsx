@@ -243,10 +243,13 @@ export default function Navbar() {
 
           <LanguageSelector />
 
-          <button className="flex h-12 items-center gap-2 whitespace-nowrap rounded-full bg-[#0d1022] px-6 text-sm text-white transition hover:bg-black">
+          <Link
+            href="/contact"
+            className="flex h-12 items-center gap-2 whitespace-nowrap rounded-full bg-[#0d1022] px-6 text-sm text-white transition hover:bg-black"
+          >
             Book a Call
             <ArrowRight size={18} />
-          </button>
+          </Link>
         </div>
 
         <button
@@ -310,12 +313,13 @@ export default function Navbar() {
               <div className="notranslate">
                 <LanguageSelector variant="mobile" />
               </div>
-              <button
-                type="button"
+              <Link
+                href="/contact"
+                onClick={() => setMenuOpen(false)}
                 className="flex h-11 w-full items-center justify-center gap-2 rounded-full bg-[#0d1022] px-4 text-sm text-white"
               >
                 Book a Call <ArrowRight size={16} />
-              </button>
+              </Link>
             </div>
           </motion.nav>
         )}
