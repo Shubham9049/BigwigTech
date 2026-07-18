@@ -3,7 +3,7 @@
 import { Phone } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa6";
 
-const phoneNumber = "918512883688";
+const phoneNumber = "918368573451";
 const whatsappMessage = encodeURIComponent(
   "Hello Bigwig Technologies, I would like to know more about your services.",
 );
