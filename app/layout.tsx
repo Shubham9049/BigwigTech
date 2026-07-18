@@ -8,7 +8,7 @@ import BackToTop from "./components/BackToTop";
 import CookiePreferences from "./components/CookiePreferences";
 
 export const metadata: Metadata = {
-  title: "CODT — Your end-to-end AI Partner",
+  title: "Bigwig technology — Your end-to-end AI Partner",
   description: "Digital products, AI platforms, and thoughtful software.",
 };
 
