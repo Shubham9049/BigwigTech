@@ -252,7 +252,7 @@ export default function ContactPage() {
                       Phone
                     </p>
                     <p className="text-[13px] font-semibold text-[#27314d]">
-                      +91 851 288 3688
+                      +91 8368573451
                     </p>
                   </div>
                 </div>
